@@ -40,11 +40,11 @@ ls "C:/Users/Pichau/Desktop/aios/squads/lt-criativos/"
 
 ### Passo 2: Verificar integridade do squad
 
-Confirme que os 69 agentes estão presentes:
+Confirme que os 70 agentes estão presentes:
 
 ```bash
 ls "C:/Users/Pichau/Desktop/aios/squads/lt-criativos/agents/" | wc -l
-# Deve retornar 69 (ou próximo disso)
+# Deve retornar 70 (ou próximo disso)
 ```
 
 Se algum agente estiver faltando, verifique o git status do repositório AIOS
@@ -400,7 +400,7 @@ A v2.0 trouxe mudanças estruturais em relação à v1 original.
 
 | Aspecto | v1 | v2 |
 |---------|----|----|
-| Número de agentes | 28 (6 tiers) | 69 (8 camadas) |
+| Número de agentes | 28 (6 tiers) | 70 (8 camadas) |
 | Produto | Agente Arquiteto (fixo) | Multi-produto, multi-nicho |
 | Avaliação | Score simples | 9 dimensões, 0-100 |
 | Geração | 1x, entrega direta | 3x interno, entrega os melhores |
@@ -415,4 +415,4 @@ A v2.0 trouxe mudanças estruturais em relação à v1 original.
 2. As regras criativas em `config/creative-rules.md` foram mantidas
 3. Os padrões em `data/` foram expandidos mas são compatíveis
 4. A memória em `_memory/` é nova: registre suas preferências existentes nos arquivos
-5. O `squad.yaml` agora tem 69 agentes, mas os comandos antigos ainda funcionam
+5. O `squad.yaml` agora tem 70 agentes, mas os comandos antigos ainda funcionam

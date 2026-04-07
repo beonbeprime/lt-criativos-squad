@@ -119,95 +119,76 @@ Guarde os criativos que performarem bem e adicione como campeões depois.
 
 ---
 
-## Etapa 3: Configure a Memória Inicial
+## Etapa 3: Configure o Produto (Automático)
 
-A memória evolutiva em `_memory/` já tem regras padrão.
-Esta etapa é para você personalizar antes de gerar o primeiro batch.
-
----
-
-**Pergunta 2: Você tem um produto definido?**
-
-Se sim, registre as informações principais para que o squad use em todo batch:
-
-Abra `_memory/global-rules.md` e adicione ao final:
-
-```
-[HOJE] [PRODUTO] Nome: [nome do produto]
-[HOJE] [PRODUTO] Preço: R$[valor] (ou [N]x de R$[parcela])
-[HOJE] [PRODUTO] Promessa: [resultado em X tempo]
-[HOJE] [PRODUTO] Âncora de valor: [produto/serviço de R$X que entrega]
-```
-
-Exemplo real:
-
-```
-[2026-04-07] [PRODUTO] Nome: Método Corpo Livre
-[2026-04-07] [PRODUTO] Preço: R$97 (ou 5x de R$21)
-[2026-04-07] [PRODUTO] Promessa: Perca 8kg em 21 dias sem academia
-[2026-04-07] [PRODUTO] Âncora de valor: Consulta de nutricionista de R$350
-```
+Não é necessário editar arquivos manualmente. O squad faz isso sozinho.
 
 ---
 
-**Pergunta 3: Você tem restrições de copy (palavras proibidas para seu produto)?**
-
-Abra `_memory/prohibitions.md` e registre:
-
-```
-[HOJE] [COPY] Nunca usar a palavra "[palavra]" porque [motivo].
-```
-
-Exemplo:
+Na primeira vez que você ativar o Zeuz Criativos, ele detecta que nenhum produto
+foi configurado e faz as perguntas automaticamente, uma por uma:
 
 ```
-[2026-04-07] [COPY] Nunca usar "dieta" porque o produto não é sobre restrição alimentar.
-[2026-04-07] [COPY] Nunca usar "emagrecer rápido" porque promessa não comprovada pode causar problema com a Meta.
+Zeuz Criativos, faça novos criativos.
+```
+
+O agente Zeuz vai responder com a primeira pergunta do onboarding. Responda
+e ele continua até completar as 8 perguntas. As informações são salvas na
+memória e nunca mais precisam ser repetidas.
+
+---
+
+**Atalho: GPT com áudio**
+
+Se preferir responder tudo de uma vez, abra o ChatGPT, ative o microfone e
+fale as respostas para as 8 perguntas com detalhes. Depois cole o resultado
+no Claude Code com:
+
+```
+Zeuz Criativos, vou colar o briefing do meu produto abaixo. Salve e use como padrão.
+
+[cole aqui o texto gerado pelo GPT]
 ```
 
 ---
 
-**Pergunta 4: Você tem preferências visuais definidas (cores, estilo)?**
+**Atalho: Arquivo .md ou PDF**
 
-Abra `_memory/visual-preferences.md` e registre:
+Se você já tem um briefing escrito em arquivo, cole o caminho diretamente:
 
 ```
-[HOJE] [VISUAL] Cor de destaque preferida: #[hex]
-[HOJE] [VISUAL] Tom visual: [dark/light/colorful]
-[HOJE] [VISUAL] Evitar: [estilos ou elementos que não combinam com a marca]
+Zeuz Criativos, meu briefing está em C:/Users/.../briefing.md - leia e salve como padrão.
 ```
 
 ---
 
-## Etapa 4: Defina seu Produto (Opcional, mas recomendado)
+**As 8 perguntas do onboarding:**
 
-Se você quer que o squad entenda profundamente o seu produto antes de gerar,
-responda às perguntas abaixo diretamente no chat com o squad.
-
-O agente Ofra (offer-researcher) vai processar e salvar na memória:
-
----
-
-Diga ao squad:
-
-```
-define o produto para essa sessão:
-- Nome: [nome]
-- Preço: R$[valor]
-- Promessa principal: [resultado + prazo]
-- Público principal: [quem é a pessoa que compra]
-- Maior dor do público: [o que a pessoa quer resolver]
-- Mecanismo único: [o que torna o produto diferente]
-- Âncora de valor: [o que o produto substitui e custaria mais caro]
-- Palavras proibidas: [lista separada por vírgula]
-```
-
-O squad vai confirmar que recebeu e processar todas as informações antes
-de qualquer geração.
+1. Qual é o nome do produto e o preço?
+2. Qual é o nicho?
+3. Quem é o público? (idade, situação, dor principal)
+4. Qual é a promessa principal? (resultado + prazo)
+5. Quais são as principais objeções do público?
+6. Tem prova ou resultado real disponível?
+7. Tem algo que NUNCA deve aparecer nos criativos?
+8. Tem um arquivo .md com briefing completo?
 
 ---
 
-## Etapa 5: Primeiro Teste
+**Regras de copy e visuais adicionais**
+
+Após o onboarding, se quiser registrar preferências específicas, diga ao squad:
+
+```
+registra que nunca devo usar a palavra "dieta" nos criativos.
+registra que prefiro fundo escuro com texto branco.
+```
+
+O agente Memo classifica e salva automaticamente nos arquivos corretos.
+
+---
+
+## Etapa 4: Primeiro Teste
 
 Com tudo configurado, rode o primeiro criativo para validar o setup completo.
 

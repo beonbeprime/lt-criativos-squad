@@ -1,6 +1,6 @@
 # Low Ticket Creative Squad (Zeuz) v2.0
 
-Squad de criação de criativos low ticket com 69 agentes em 8 camadas.
+Squad de criação de criativos low ticket com 70 agentes em 8 camadas.
 Opera com qualquer produto entre R$9 e R$297, em qualquer nicho.
 Gera 3x o volume internamente, avalia cada criativo com 9 critérios
 e entrega apenas os que atingem score mínimo 70.
@@ -118,11 +118,11 @@ Templates disponíveis: `dark-cinematic`, `white-marble`, `fire-impact`,
 
 | Camada | Nome | Agentes | Função |
 |--------|------|---------|--------|
-| 0 | Orquestração | 8 | Direção, routing, memória, classificação de peso, otimização de recursos |
+| 0 | Orquestração | 9 | Direção, routing, memória, classificação de peso, otimização de recursos |
 | 1 | Inteligência | 10 | Análise de campeões, nicho, público-alvo, oferta e concorrência |
 | 2 | Estratégia de Mensagem | 8 | Identificação, clareza, promessa, hooks verbais e visuais, dor e desejo |
 | 3 | Estratégia | 6 | Briefing, planejamento de batch, variações, escala e ganchos |
-| 4 | Copy | 12 | Geração massiva, refinamento, auditoria anti-genérico e anti-IA |
+| 4 | Copy | 13 | Geração massiva, refinamento, auditoria anti-genérico e anti-IA |
 | 5 | Direção Visual | 5 | Conceito visual, mockup fotográfico, realismo, variação de cena |
 | 6 | Produção | 5 | Prompts Lovart, validação, formato 9:16 e safe zone |
 | 7 | Formato e Entrega | 5 | Corte inteligente Feed, empacotamento, organização por batch |
@@ -154,6 +154,7 @@ Templates disponíveis: `dark-cinematic`, `white-marble`, `fire-impact`,
 - Cut (simplification-copywriter) - encurta sem perder força
 - Kill2 (anti-generic-auditor) - elimina clichês e frases fracas
 - Human (anti-ai-auditor) - detecta e remove linguagem robótica
+- Nita (interpretive-clarity-agent) - garante que a copy faça sentido para quem nunca viu o produto
 
 **Camada 8 - Avaliação**
 - Judge (lt-quality-scorer) - score 0-100 nas 9 dimensões

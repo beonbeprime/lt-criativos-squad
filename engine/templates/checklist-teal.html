@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=1080" />
+  <title>Checklist Teal</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#F2FAF8;font-family:'DM Sans',sans-serif}
+    .bg{position:absolute;inset:0;background:linear-gradient(145deg,#FFFFFF 0%,#E4F5F1 100%)}
+    .top-block{position:absolute;top:0;left:0;right:0;height:480px;background:#006B5E;clip-path:polygon(0 0,100% 0,100% 78%,0 100%)}
+    .top-content{position:absolute;top:80px;left:80px;right:80px}
+    .top-nicho{font-size:18px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.35em;text-transform:uppercase;margin-bottom:28px}
+    .top-h{font-size:82px;font-weight:900;color:#fff;line-height:.94;text-transform:uppercase;letter-spacing:-.02em}
+    .top-sub{font-size:30px;font-weight:200;color:rgba(255,255,255,.6);margin-top:20px}
+    .content{position:absolute;top:500px;left:80px;right:80px;bottom:640px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+    /* Cards dos itens */
+    .steps{display:flex;flex-direction:column;gap:16px;margin-bottom:52px;width:100%}
+    .step{display:flex;align-items:center;gap:24px;background:#fff;border-radius:12px;padding:24px 28px;box-shadow:0 2px 16px rgba(0,107,94,.06)}
+    .step-num{font-size:15px;font-weight:700;color:#006B5E;width:28px;height:28px;border-radius:50%;background:rgba(0,107,94,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .step-text{font-size:28px;font-weight:700;color:#0D1F1D}
+    .step-desc{font-size:18px;font-weight:300;color:rgba(0,0,0,.4);margin-top:2px}
+    .price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+    .price{font-size:108px;font-weight:900;color:#006B5E;line-height:1;letter-spacing:-.03em}
+    .inst{font-size:26px;color:rgba(0,0,0,.3);margin-bottom:48px}
+    .cta{background:#006B5E;color:#fff;font-size:34px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:30px 80px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="top-block"></div>
+  <div class="top-content">
+    <div class="top-nicho">{{NICHO}}</div>
+    <div class="top-h">4 itens que<br>faltam pra você</div>
+    <div class="top-sub">vender por R$2.997</div>
+  </div>
+  <div class="content">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div><div class="step-text">Nome da sua mentoria</div><div class="step-desc">identidade clara para o mercado</div></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div><div class="step-text">Cronograma de aulas</div><div class="step-desc">estrutura que gera confiança</div></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div><div class="step-text">Precificação</div><div class="step-desc">R$2.997 com posicionamento certo</div></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div><div class="step-text">Proposta pública</div><div class="step-desc">mensagem que converte em vendas</div></div>
+      </div>
+    </div>
+    <div class="price">{{PRICE}}</div>
+    <div class="inst">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

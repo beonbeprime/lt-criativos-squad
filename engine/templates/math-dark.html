@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=1080" />
+  <title>Math Dark</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#09080A;font-family:'DM Sans',sans-serif}
+    .bg{position:absolute;inset:0;background:radial-gradient(ellipse 800px 600px at 50% 35%,rgba(201,168,76,0.10) 0%,transparent 65%),#09080A}
+    .grain{position:absolute;inset:0;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+    .content{position:absolute;top:0;left:80px;right:80px;bottom:690px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 40px 60px}
+    .nicho{font-size:18px;font-weight:700;color:#C9A84C;letter-spacing:.35em;text-transform:uppercase;margin-bottom:40px}
+    .eyebrow{font-size:26px;font-weight:300;color:rgba(255,255,255,.4);margin-bottom:44px}
+    /* Blocos de matemática */
+    .math-block{display:flex;flex-direction:column;gap:0;margin-bottom:52px;width:100%}
+    .row{display:flex;align-items:center;gap:0;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .row:first-child{border-top:1px solid rgba(255,255,255,.06)}
+    .r-qty{font-size:28px;font-weight:300;color:rgba(255,255,255,.4);width:180px;text-align:left}
+    .r-qty b{font-size:48px;font-weight:900;color:#fff;display:block;line-height:1}
+    .r-eq{font-size:32px;color:rgba(255,255,255,.2);margin:0 24px}
+    .r-val{font-size:56px;font-weight:900;color:#C9A84C;text-align:right;flex:1;letter-spacing:-.02em}
+    .row.highlight{background:rgba(201,168,76,.06);border-radius:8px;padding:28px 20px;border:1px solid rgba(201,168,76,.2)}
+    .row.highlight .r-val{font-size:72px;background:linear-gradient(90deg,#C9A84C,#E8D080);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .cta-text{font-size:26px;font-weight:300;color:rgba(255,255,255,.4);margin-bottom:48px;line-height:1.5}
+    .cta-text span{color:#C9A84C;font-weight:700}
+    .price{font-size:112px;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em;margin-bottom:10px}
+    .inst{font-size:26px;color:rgba(255,255,255,.28);margin-bottom:48px}
+    .cta{background:#C9A84C;color:#09080A;font-size:34px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:30px 80px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="grain"></div>
+  <div class="content">
+    <div class="nicho">{{NICHO}}</div>
+    <div class="eyebrow">a conta mais simples que você vai fazer hoje</div>
+    <div class="math-block">
+      <div class="row">
+        <div class="r-qty"><b>1</b>mentoria</div>
+        <div class="r-eq">=</div>
+        <div class="r-val">R$3.000</div>
+      </div>
+      <div class="row">
+        <div class="r-qty"><b>5</b>mentorias</div>
+        <div class="r-eq">=</div>
+        <div class="r-val">R$15.000</div>
+      </div>
+      <div class="row highlight">
+        <div class="r-qty"><b>10</b>mentorias</div>
+        <div class="r-eq">=</div>
+        <div class="r-val">R$30.000</div>
+      </div>
+    </div>
+    <div class="cta-text">comece agora com o Agente Arquiteto</div>
+    <div class="price">{{PRICE}}</div>
+    <div class="inst">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>
