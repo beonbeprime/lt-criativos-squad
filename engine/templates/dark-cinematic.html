@@ -169,7 +169,26 @@
       border-radius: 8px;
       box-shadow: 0 0 60px color-mix(in srgb, {{ACCENT_COLOR}} 45%, transparent);
     }
-  </style>
+  
+    /* === REGRAS ANTI-QUEBRA (global) === */
+    /* Preços e valores monetários nunca quebram linha */
+    .price,.inst,.price-installment,.vr-num,.sr-val,.badge-price,
+    .start,.start span,.value,.value-row,.vr-label+.vr-num,
+    .accent-text,.price-row,.price-wrapper .price,
+    .cta-text,.note,.start-note,.hero-value {
+      white-space: nowrap;
+    }
+    /* Títulos sem hifenização automática */
+    .headline,.subheadline,.h1,.h2,.h3,.top-h,.top-headline,
+    .body,.lead,.nicho,.nicho-tag,.top-nicho,
+    .accent,.sub-label,.step-row,.vr-label {
+      hyphens: none;
+      word-break: keep-all;
+    }
+    /* Garante que headline e subheadline preencham bem sem órfãos */
+    .headline,.h1 { text-wrap: balance; }
+    .subheadline,.body,.h2 { text-wrap: pretty; }
+</style>
 </head>
 <body>
   <!-- Camadas de fundo -->

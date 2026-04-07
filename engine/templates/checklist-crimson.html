@@ -24,7 +24,26 @@
     .price{font-size:112px;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em;margin-bottom:10px}
     .inst{font-size:26px;color:rgba(255,255,255,.28);margin-bottom:52px}
     .cta{background:#E01040;color:#fff;font-size:34px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:30px 80px;border-radius:2px}
-  </style>
+  
+    /* === REGRAS ANTI-QUEBRA (global) === */
+    /* Preços e valores monetários nunca quebram linha */
+    .price,.inst,.price-installment,.vr-num,.sr-val,.badge-price,
+    .start,.start span,.value,.value-row,.vr-label+.vr-num,
+    .accent-text,.price-row,.price-wrapper .price,
+    .cta-text,.note,.start-note,.hero-value {
+      white-space: nowrap;
+    }
+    /* Títulos sem hifenização automática */
+    .headline,.subheadline,.h1,.h2,.h3,.top-h,.top-headline,
+    .body,.lead,.nicho,.nicho-tag,.top-nicho,
+    .accent,.sub-label,.step-row,.vr-label {
+      hyphens: none;
+      word-break: keep-all;
+    }
+    /* Garante que headline e subheadline preencham bem sem órfãos */
+    .headline,.h1 { text-wrap: balance; }
+    .subheadline,.body,.h2 { text-wrap: pretty; }
+</style>
 </head>
 <body>
   <div class="bg"></div><div class="grain"></div><div class="bar"></div>
