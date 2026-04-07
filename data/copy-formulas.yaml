@@ -1,0 +1,335 @@
+# Formulas de Copy - Low Ticket Agente Arquiteto
+# Baseado em: docs/rules-on-demand/low-ticket-creative-standard.md
+# Produto: Agente Arquiteto (R$67) - promessa: Sua mentoria pronta em 8 minutos
+
+# Framework principal obrigatorio
+frameworks:
+  p_r_s_a:
+    name: "P.R.S-A (Problema-Rota-Solucao-Acao)"
+    required: true
+    description: "Framework base de todo criativo LT. Aplicar nesta ordem."
+    steps:
+      P:
+        label: "Problema"
+        description: "Identifica e amplifica a dor do mentor"
+        examples:
+          - "Voce sabe demais para estar faturando assim"
+          - "Sua mentoria existe na sua cabeca mas nao no papel"
+          - "Anos de conhecimento parados sem virar produto"
+      R:
+        label: "Rota"
+        description: "Apresenta o caminho/mecanismo (IA em 8 minutos)"
+        examples:
+          - "O Agente Arquiteto organiza tudo em 8 minutos"
+          - "IA estrutura sua mentoria automaticamente"
+          - "8 minutos e a sua mentoria esta pronta para vender"
+      S:
+        label: "Solucao"
+        description: "Mostra o que o produto entrega (mentoria pronta para vender R$2.997)"
+        examples:
+          - "Mentoria estruturada pronta para vender por R$2.997"
+          - "Produto de alto ticket criado pelo proprio agente"
+          - "Da conhecimento bruto a mentoria de R$2.997"
+      A:
+        label: "Acao"
+        description: "CTA direto com preco"
+        examples:
+          - "Por apenas R$67 - Arquiteto High Ticket"
+          - "Acesse agora por R$67"
+          - "Toque no botao - apenas R$67"
+
+  copy_killer:
+    name: "Copy Killer"
+    description: "Sistema de geracao e variacao de copy para criativos"
+    modes:
+      AUTO:
+        description: "Recebe imagem de criativo campecao e gera 10 variacoes (2 proximas + 8 variacoes)"
+        trigger: "enviar imagem do campecao para o squad"
+        output: "10 briefings completos com copy e descricao visual"
+      ZERO:
+        description: "Cria criativo do zero sem referencia"
+        trigger: "'cria criativo do zero' ou 'novo angulo'"
+        output: "briefing completo com tema sugerido pelo hook-specialist"
+      ADAPT:
+        description: "Adapta padrao aprovado para publico especifico"
+        trigger: "'adapta para medico' ou 'versao para advogado'"
+        output: "briefing com segmentacao de nicho"
+
+# Formulas de H1 (headline principal)
+h1_formulas:
+  resultado_em_tempo:
+    template: "Sua mentoria {resultado} em {tempo}"
+    canonical: "Sua mentoria pronta em 8 minutos"
+    max_chars: 32
+    notes: "Formula campea. Usar em 100% dos criativos. Apenas accent varia."
+
+  contraste_de_dor:
+    template: "Para de {acao negativa} e {acao positiva}"
+    example: "Para de adiar sua mentoria"
+    max_chars: 36
+    notes: "Funciona como variacao V7 (remove crenca falsa)"
+
+  numero_chocante:
+    template: "De R${ancora} por apenas R${preco}"
+    example: "De R$297 por apenas R$67"
+    max_chars: 30
+    notes: "Formula de ancora. Usar quando preco e o hero da mensagem."
+
+  paradoxo:
+    template: "{Obstáculo aparente} resolvido em {tempo}"
+    example: "Sem tempo para mentoria? 8 minutos resolvem"
+    max_chars: 40
+    notes: "Remove objecao de complexidade antes de surgir"
+
+  pergunta_provocadora:
+    template: "Por que seu conhecimento ainda nao virou {produto}?"
+    example: "Por que seu conhecimento ainda nao virou mentoria?"
+    max_chars: 50
+    notes: "Abre com culpa/questionamento. Forte para remarketing."
+
+# Formulas de H2 / Ancora de valor
+h2_formulas:
+  transformacao:
+    template: "Transforme {ativo} em uma mentoria de R${valor}"
+    example: "Transforme anos de conhecimento em uma mentoria de R$ 2.997,00"
+    max_chars: 80
+    notes: "Ancora principal. Presente em 4 dos 5 campeoes."
+
+  venda_por:
+    template: "venda por R${valor}"
+    example: "venda por R$2.997"
+    max_chars: 20
+    notes: "Versao curta da ancora. Usa em Themes de pouco espaco (Fire, Lousa)."
+
+  resultado_direto:
+    template: "mentoria de R${valor} pronta em {tempo}"
+    example: "mentoria de R$2.997 pronta em 8 minutos"
+    max_chars: 45
+    notes: "Combina ancora e tempo. Variacao compacta."
+
+  prova_social:
+    template: "+{numero} mentores ja estruturaram com IA"
+    example: "+500 mentores ja estruturaram com IA"
+    max_chars: 40
+    notes: "Para variacoes V5. Precisa de dado real quando disponivel."
+
+# Formulas de CTA
+cta_formulas:
+  arquiteto:
+    text: "Arquiteto High Ticket"
+    max_chars: 20
+    usage: "CTA minimo. Nomeia o produto sem verbo."
+
+  conhca_agente:
+    text: "Conheca o agente de IA"
+    max_chars: 22
+    usage: "Quando quiser enfatizar o angulo de IA/tecnologia."
+
+  botao_padrao:
+    text: "Toque no botao"
+    max_chars: 15
+    usage: "CTA de acao direta. Geralmente com preco logo abaixo."
+
+  acesse_agora:
+    text: "Acesse agora por R$67"
+    max_chars: 22
+    usage: "CTA com preco embutido. Mais direto."
+
+  toque_completo:
+    text: "Toque no botao e conheca nosso agente Arquiteto High Ticket"
+    max_chars: 60
+    usage: "CTA longo. Para criativos com muito espaco de texto (Feed)."
+
+# Opcoes de exibicao de preco
+price_display_formulas:
+  direct:
+    text: "R$67,00"
+    when: "clareza maxima, publico qualificado, sem necessidade de ancora"
+
+  anchor:
+    text: "De R$297 por apenas R$67"
+    when: "maximizar valor percebido, mostrar desconto, publico frio"
+
+  installment:
+    text: "10x de R$8,05"
+    when: "reduzir barreira psicologica, campanha de escala, publico sensivel a preco"
+
+  minimal:
+    text: "apenas 67"
+    when: "criativos dramaticos ou de foco visual, texto dentro de placa/lousa"
+
+  parcelamento_extended:
+    text: "por apenas 10x de R$8,05"
+    when: "campecao dark-cinematic e variacoes proximas dele"
+
+# Ganchos aprovados (validados nos campeoes)
+hooks_approved:
+  - id: h01
+    type: dor
+    text: "Voce sabe demais para estar faturando assim"
+    psychology: "Ativa consciencia de valor nao monetizado. Gera arrependimento produtivo."
+    usage: "V4 (publico de mentores com experiencia) ou abertura de copy de video"
+
+  - id: h02
+    type: resultado
+    text: "Sua mentoria pronta em 8 minutos"
+    psychology: "Hook de resultado direto. Promessa concreta e especifica."
+    usage: "H1 universal - campecao absoluto. Usar em 100% dos criativos."
+
+  - id: h03
+    type: provocacao
+    text: "Pare de adiar sua mentoria"
+    psychology: "Remove objecao de procrastinacao. Culpa ligeira ativada."
+    usage: "V7 (remocao de crenca falsa). Strong para remarketing."
+
+  - id: h04
+    type: calculo_valor
+    text: "R$67 para vender por R$2.997 - o calculo e simples"
+    psychology: "ROI obvio. Persuasao via matematica. Zero risco percebido."
+    usage: "V1 (varia cor), V2 (varia copy) quando quiser foco no ROI."
+
+  - id: h05
+    type: crenca_falsa
+    text: "Voce nao precisa de curso gravado para ter mentoria"
+    psychology: "Remove a crenca de que e dificil e demorado criar produto."
+    usage: "V7 dedicado. Topo de funil frio."
+
+  - id: h06
+    type: especificidade
+    text: "8 minutos. Mentoria estruturada. R$2.997."
+    psychology: "Tres numeros especificos. Credibilidade maxima via especificidade."
+    usage: "Variacao minimalista. Fundo clean ou lousa."
+
+  - id: h07
+    type: identidade
+    text: "Mentores que faturam mais estruturam primeiro"
+    psychology: "Identidade de mentor de sucesso. Autoridade por associacao."
+    usage: "V4 (publico avancado) ou angulo de autoridade."
+
+  - id: h08
+    type: urgencia
+    text: "Cada dia sem sua mentoria estruturada e dinheiro que nao entra"
+    psychology: "Custo de inacao. Urgencia sem deadline artificial."
+    usage: "V6 (urgencia). Remarketing."
+
+  - id: h09
+    type: ia_diferenciacao
+    text: "IA estrutura o que voce sabe. Voce so responde perguntas."
+    psychology: "Remove medo de complexidade. IA como facilitadora, nao substituta."
+    usage: "V4 (publico tech) ou angulo de novidade."
+
+  - id: h10
+    type: numero_chocante
+    text: "67 reais. Mentoria de 2997."
+    psychology: "Contraste numerico impactante. Minimalismo que chama atencao."
+    usage: "V8 VIAGEM LOUCA ou layout minimalista dramatico."
+
+# Matriz de variacoes 2+8 com instrucoes de copy
+variation_matrix:
+  proxima_1:
+    code: "P1"
+    name: "Proxima 1 - Escala direta"
+    rule: "Preserva exatamente o motivo de conversao do campecao. Muda APENAS a cor do accent."
+    copy_change: "identica ao campecao"
+    visual_change: "cor do accent (dourado para vermelho, ou vermelho para verde)"
+    copy_example: "Identica ao campecao de referencia"
+
+  proxima_2:
+    code: "P2"
+    name: "Proxima 2 - Escala de ancora"
+    rule: "Mesmo visual e tema. Varia apenas a estrategia de preco."
+    copy_change: "Troca estrategia de preco (direto para parcelamento, ou ancora para direto)"
+    visual_change: "identico ao campecao"
+    copy_example: "Se campecao usa ancora: trocar para parcelamento 10x R$8,05"
+
+  v1:
+    code: "V1"
+    name: "Cor Variante"
+    rule: "Varia cor do background ou accent. Copy 100% identica ao campecao."
+    copy_change: "zero"
+    visual_change: "cor do fundo ou accent"
+    copy_example: "Identica ao campecao. Nao tocar."
+
+  v2:
+    code: "V2"
+    name: "Copy Variante"
+    rule: "Varia a copy principal. Visual/tema identico ao campecao."
+    copy_change: "H1 ou ancora ou preco - escolher um"
+    visual_change: "zero"
+    copy_example: "Trocar 'Transforme anos de conhecimento' por 'Voce sabe demais para estar faturando assim'"
+
+  v3:
+    code: "V3"
+    name: "Copy + Cor"
+    rule: "Varia copy E cor simultaneamente. Composicao e tema preservados."
+    copy_change: "H1 e/ou ancora"
+    visual_change: "paleta de cor do tema"
+    copy_example: "Nova headline + nova paleta. Estrutura de layout identica."
+
+  v4:
+    code: "V4"
+    name: "Publico Especifico"
+    rule: "Adiciona segmentacao de nicho na copy. Estrutura visual preservada."
+    copy_change: "Adicionar nicho especifico no H2 ou ancora"
+    visual_change: "pode ajustar para o contexto do nicho"
+    copy_example: "Para medicos: 'Transforme sua experiencia clinica em mentoria de R$2.997'"
+    niches:
+      - "medicos"
+      - "advogados"
+      - "nutricionistas"
+      - "coaches"
+      - "professores"
+      - "engenheiros"
+      - "contadores"
+
+  v5:
+    code: "V5"
+    name: "Prova Social"
+    rule: "Inclui numero de usuarios ou resultado de aluno como nucleo visual."
+    copy_change: "H1 ou H2 com dado de prova social"
+    visual_change: "elemento de prova social no visual"
+    copy_example: "+500 mentores ja usaram - sua mentoria pronta em 8 minutos"
+    notes: "Usar dado real quando disponivel. Se nao tiver: '+ de 200 mentores'"
+
+  v6:
+    code: "V6"
+    name: "Urgencia"
+    rule: "Adiciona elemento de escassez ou urgencia na copy."
+    copy_change: "Adicionar urgencia no CTA ou H2"
+    visual_change: "pode adicionar countdown ou badge de urgencia"
+    copy_example: "Oferta por tempo limitado - Arquiteto High Ticket por R$67"
+
+  v7:
+    code: "V7"
+    name: "Crenca Falsa"
+    rule: "Abre com remocao de crenca limitante. CTA e preco preservados."
+    copy_change: "H1 e/ou H2 focados na remocao da crenca"
+    visual_change: "minimal ou zero"
+    copy_example: "Voce nao precisa de curso gravado para ter mentoria - 8 minutos e sua mentoria esta pronta"
+
+  v8:
+    code: "V8"
+    name: "VIAGEM LOUCA"
+    rule: "Imagem completamente absurda ou inesperada para scroll-stop extremo. Copy principal e preco preservados."
+    copy_change: "preservar H1 e preco. H2 pode adaptar."
+    visual_change: "TOTAL - imagem deve ser completamente inesperada"
+    copy_example: "H1 identico. Preco identico. Background: astronauta, leao, chef, viagem espacial."
+    examples_visual:
+      - "Astronauta em orbita com placa de mentoria"
+      - "Leao em escritorio elegante com laptop"
+      - "Chef estrelado em cozinha com lousa de mentoria"
+      - "Mago medieval segurando pergaminho de mentoria"
+      - "Mergulhador em oceano profundo com placa de mentoria"
+      - "Cowboy no deserto com outdoor de mentoria"
+
+# Regras anti-agrupamento Meta Ads
+anti_grouping:
+  description: "O Meta Ads agrupa criativos similares e desacelera a distribuicao dos menores. A diversidade previne o agrupamento."
+  rules:
+    - "Nunca gerar 2 criativos com mesmo tema E mesma copy ao mesmo tempo"
+    - "Rotacionar temas de background a cada batch"
+    - "Variar estrategia de preco entre os 10 criativos do batch"
+    - "Incluir pelo menos 1 V8 por batch (visual drasticamente diferente)"
+    - "Incluir pelo menos 1 criativo sem pessoa e 1 com pessoa"
+    - "Variar CTA entre pelo menos 3 formatos diferentes por batch"
+  rotation_rule: "Nunca repetir o mesmo tema em mais de 3 criativos no mesmo batch de 10"

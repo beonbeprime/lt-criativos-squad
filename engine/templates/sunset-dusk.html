@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Sunset Dusk</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #08020F; font-family: 'DM Sans', sans-serif; }
+
+    /* Gradiente sunset: coral para violeta */
+    .bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 900px 600px at 50% 0%, rgba(255,107,71,0.2) 0%, transparent 55%),
+        radial-gradient(ellipse 700px 500px at 50% 100%, rgba(155,93,229,0.2) 0%, transparent 55%),
+        radial-gradient(ellipse 400px 400px at 50% 50%, rgba(255,61,135,0.08) 0%, transparent 50%),
+        #08020F;
+    }
+
+    /* Linha horizonte */
+    .horizon {
+      position: absolute; top: 640px; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,107,71,0.25) 30%, rgba(155,93,229,0.25) 70%, transparent);
+    }
+
+    .grain {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0.1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    .content {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 640px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center; padding: 100px 80px 60px;
+    }
+
+    /* Ícone sol nascendo */
+    .icon-wrap { margin-bottom: 64px; }
+
+    .eyebrow {
+      font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.4);
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 32px;
+    }
+
+    /* Headline com gradient sunset */
+    .headline {
+      font-size: 92px; font-weight: 900; text-transform: uppercase;
+      line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 16px;
+      background: linear-gradient(135deg, #FF6B47, #FF3D87);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .headline-2 {
+      font-size: 92px; font-weight: 200; text-transform: uppercase;
+      line-height: 0.9; letter-spacing: -0.02em; color: #ffffff;
+      margin-bottom: 56px;
+    }
+
+    /* Pill com valor */
+    .value-pill {
+      display: inline-flex; align-items: center; gap: 0;
+      border-radius: 100px; overflow: hidden; margin-bottom: 72px;
+    }
+    .vp-left {
+      background: rgba(255,107,71,0.15); border: 1px solid rgba(255,107,71,0.3);
+      border-right: none; border-radius: 100px 0 0 100px;
+      padding: 16px 28px; font-size: 24px; color: #FF6B47; font-weight: 400;
+    }
+    .vp-right {
+      background: rgba(155,93,229,0.15); border: 1px solid rgba(155,93,229,0.3);
+      border-left: none; border-radius: 0 100px 100px 0;
+      padding: 16px 28px; font-size: 24px; font-weight: 700;
+      background: linear-gradient(90deg, rgba(155,93,229,0.2), rgba(155,93,229,0.1));
+      color: #C77DFF;
+    }
+
+    /* Preço */
+    .price {
+      font-size: 116px; font-weight: 900; line-height: 1; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #FF6B47, #C77DFF);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+    .price-installment { font-size: 28px; color: rgba(255,255,255,0.3); margin-bottom: 72px; }
+
+    .cta {
+      background: linear-gradient(135deg, #FF6B47, #9B5DE5);
+      color: #fff; font-size: 36px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 34px 88px; border-radius: 100px;
+      box-shadow: 0 0 80px rgba(255,107,71,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="horizon"></div>
+  <div class="grain"></div>
+  <div class="content">
+    <div class="icon-wrap">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="38" r="16" stroke="url(#sg)" stroke-width="2" fill="rgba(255,107,71,0.06)"/>
+        <path d="M36 16V10" stroke="#FF6B47" stroke-width="2" stroke-linecap="round"/>
+        <path d="M56 38H62" stroke="#C77DFF" stroke-width="2" stroke-linecap="round"/>
+        <path d="M10 38H16" stroke="#C77DFF" stroke-width="2" stroke-linecap="round"/>
+        <path d="M50 24L54 20" stroke="#FF6B47" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 24L22 20" stroke="#FF6B47" stroke-width="2" stroke-linecap="round"/>
+        <path d="M16 56H56" stroke="url(#sg)" stroke-width="2" stroke-linecap="round"/>
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="72" y2="0"><stop stop-color="#FF6B47"/><stop offset="1" stop-color="#9B5DE5"/></linearGradient></defs>
+      </svg>
+    </div>
+    <div class="eyebrow">{{NICHO}}</div>
+    <div class="headline">Venda</div>
+    <div class="headline-2">sua mentoria</div>
+    <div class="value-pill">
+      <div class="vp-left">em 8 minutos</div>
+      <div class="vp-right">por R$2.997</div>
+    </div>
+    <div class="price">{{PRICE}}</div>
+    <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

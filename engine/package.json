@@ -1,0 +1,13 @@
+{
+  "name": "lt-criativos-engine",
+  "version": "2.0.0",
+  "description": "Motor de renderização HTML para criativos low ticket via Playwright",
+  "main": "renderer.js",
+  "scripts": {
+    "test": "node renderer.js --test",
+    "render": "node renderer.js"
+  },
+  "dependencies": {
+    "playwright": "^1.42.0"
+  }
+}

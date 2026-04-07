@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=1080" />
+  <title>Var Obsidian Mint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#080C10;font-family:'DM Sans',sans-serif}
+    .bg{position:absolute;inset:0;background:radial-gradient(ellipse 700px 500px at 50% 30%,rgba(0,220,160,0.10) 0%,transparent 60%),#080C10}
+    .grain{position:absolute;inset:0;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+    /* Círculos concêntricos decorativos no canto superior direito */
+    .rings{position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;border:1px solid rgba(0,220,160,.08)}
+    .rings::before{content:'';position:absolute;inset:40px;border-radius:50%;border:1px solid rgba(0,220,160,.06)}
+    .rings::after{content:'';position:absolute;inset:80px;border-radius:50%;border:1px solid rgba(0,220,160,.04)}
+    /* Linha dupla decorativa */
+    .double-rule{position:absolute;left:80px;right:80px;height:1px;background:rgba(0,220,160,.2)}
+    .dr1{top:175px}.dr2{top:179px}.dr3{top:1228px}.dr4{top:1232px}
+    .content{position:absolute;top:200px;left:80px;right:80px;bottom:690px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .icon-wrap{margin-bottom:52px}
+    .nicho{font-size:18px;font-weight:700;color:#00DCA0;letter-spacing:.35em;text-transform:uppercase;margin-bottom:44px}
+    .h1{font-family:'Playfair Display',serif;font-size:80px;font-weight:700;color:#fff;line-height:1.05;margin-bottom:8px}
+    .h2{font-family:'Playfair Display',serif;font-size:80px;font-style:italic;color:#00DCA0;line-height:1.05;margin-bottom:48px}
+    .body{font-size:30px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.6;margin-bottom:52px;max-width:820px}
+    .start-tag{background:rgba(0,220,160,.10);border:1px solid rgba(0,220,160,.22);border-radius:8px;padding:16px 40px;margin-bottom:52px;font-size:26px;color:#00DCA0;display:inline-block}
+    .start-tag b{color:#fff}
+    .price{font-size:112px;font-weight:900;color:#00DCA0;line-height:1;letter-spacing:-.03em;margin-bottom:10px}
+    .inst{font-size:26px;color:rgba(255,255,255,.28);margin-bottom:64px}
+    .cta{border:2px solid #00DCA0;color:#00DCA0;font-size:34px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:30px 80px}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="grain"></div><div class="rings"></div>
+  <div class="double-rule dr1"></div><div class="double-rule dr2"></div>
+  <div class="double-rule dr3"></div><div class="double-rule dr4"></div>
+  <div class="content">
+    <div class="icon-wrap">
+      <svg width="68" height="68" viewBox="0 0 68 68" fill="none">
+        <circle cx="34" cy="34" r="26" stroke="#00DCA0" stroke-width="1.5" fill="rgba(0,220,160,.04)"/>
+        <circle cx="34" cy="34" r="18" stroke="#00DCA0" stroke-width="1" opacity=".4"/>
+        <path d="M24 34L30 40L44 26" stroke="#00DCA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nicho">{{NICHO}}</div>
+    <div class="h1">Estruture a sua mentoria</div>
+    <div class="h2">e venda por R$2.997</div>
+    <p class="body">Organize o que você sabe. Estruture seu produto. Comece a vender.</p>
+    <div class="start-tag">comece agora por <b>{{PRICE}}</b></div>
+    <div class="price">{{PRICE}}</div>
+    <div class="inst">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

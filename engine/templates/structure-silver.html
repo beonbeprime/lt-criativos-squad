@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=1080" />
+  <title>Structure Silver</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#050507;font-family:'DM Sans',sans-serif}
+    .bg{position:absolute;inset:0;background:radial-gradient(ellipse 800px 600px at 50% 30%,rgba(180,180,200,0.07) 0%,transparent 60%),#050507}
+    .grain{position:absolute;inset:0;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+    /* Retângulo branco esquerda — elemento editorial */
+    .block-left{position:absolute;top:180px;left:80px;width:5px;height:880px;background:linear-gradient(180deg,transparent,#B0B0C0 20%,#D0D0E0 50%,#B0B0C0 80%,transparent)}
+    .content{position:absolute;top:0;left:120px;right:80px;bottom:640px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:120px 0 60px}
+    .nicho{font-size:18px;font-weight:700;color:#808090;letter-spacing:.35em;text-transform:uppercase;margin-bottom:52px}
+    .step-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    .step-num{font-size:18px;font-weight:700;color:#505060;letter-spacing:.1em}
+    .step-line{flex:1;height:1px;background:rgba(255,255,255,.06)}
+    .h1{font-size:96px;font-weight:900;color:#fff;text-transform:uppercase;line-height:.92;letter-spacing:-.03em;margin-bottom:8px}
+    .h2{font-size:96px;font-weight:200;line-height:.92;letter-spacing:-.03em;margin-bottom:56px;background:linear-gradient(90deg,#C0C0D0,#E8E8F0,#A0A0B0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .value-row{display:flex;align-items:center;gap:20px;margin-bottom:64px}
+    .vr-label{font-size:22px;font-weight:300;color:rgba(255,255,255,.3)}
+    .vr-num{font-size:40px;font-weight:700;background:linear-gradient(90deg,#C0C0D0,#E8E8F0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .body{font-size:28px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.5;margin-bottom:64px;max-width:840px}
+    .start{font-size:26px;color:rgba(180,180,200,.6);margin-bottom:40px}
+    .start span{color:#C0C0D0;font-weight:700}
+    .price{font-size:110px;font-weight:900;line-height:1;letter-spacing:-.03em;margin-bottom:10px;background:linear-gradient(135deg,#C0C0D0,#ffffff,#A0A0B0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .inst{font-size:26px;color:rgba(255,255,255,.25);margin-bottom:64px}
+    .cta{border:1.5px solid #808090;color:#C0C0D0;font-size:34px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:30px 80px}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="grain"></div><div class="block-left"></div>
+  <div class="content">
+    <div class="nicho">{{NICHO}}</div>
+    <div class="step-row"><span class="step-num">01</span><div class="step-line"></div></div>
+    <div class="h1">Estruture</div>
+    <div class="h2">sua mentoria</div>
+    <div class="value-row">
+      <span class="vr-label">e venda por</span>
+      <span class="vr-num">R$2.997</span>
+    </div>
+    <p class="body">Organize seu conhecimento. Lance seu produto. Venda do jeito certo.</p>
+    <div class="start">comece agora por <span>{{PRICE}}</span></div>
+    <div class="price">{{PRICE}}</div>
+    <div class="inst">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

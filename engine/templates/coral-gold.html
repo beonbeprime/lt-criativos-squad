@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Coral Gold</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0A0805; font-family: 'DM Sans', sans-serif; }
+
+    .bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 800px 600px at 50% 30%, rgba(255,107,71,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse 400px 400px at 85% 75%, rgba(255,215,0,0.07) 0%, transparent 50%),
+                  #0A0805;
+    }
+
+    /* Faixa coral esquerda */
+    .left-stripe {
+      position: absolute; top: 200px; left: 0;
+      width: 8px; height: 900px;
+      background: linear-gradient(180deg, transparent, #FF6B47 20%, #FFD700 80%, transparent);
+    }
+
+    /* Número decorativo de fundo */
+    .deco-2997 {
+      position: absolute; bottom: 700px; right: -60px;
+      font-size: 300px; font-weight: 900; line-height: 1;
+      color: rgba(255,107,71,0.04); letter-spacing: -0.05em; user-select: none;
+    }
+
+    .grain {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0.1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    .content {
+      position: absolute; top: 0; left: 60px; right: 60px; bottom: 640px;
+      display: flex; flex-direction: column; align-items: flex-start;
+      justify-content: center; padding: 140px 60px 60px 80px;
+    }
+
+    .eyebrow { font-size: 20px; font-weight: 300; color: #FF6B47; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 48px; }
+
+    /* Headline: grande e em 3 linhas rítmicas */
+    .h1 { font-size: 78px; font-weight: 900; color: rgba(255,255,255,0.35); text-transform: uppercase; line-height: 1; letter-spacing: -0.01em; margin-bottom: 0; }
+    .h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 96px; font-weight: 700; color: #ffffff; line-height: 1.0; margin-bottom: 0;
+    }
+    .h3 {
+      font-size: 78px; font-weight: 200; color: #FF6B47; text-transform: uppercase;
+      line-height: 1; letter-spacing: 0.02em; margin-bottom: 52px;
+    }
+
+    /* Destaque R$2.997 */
+    .value-tag {
+      display: inline-flex; align-items: center; gap: 16px;
+      margin-bottom: 72px;
+    }
+    .vt-bar { width: 32px; height: 2px; background: #FFD700; }
+    .vt-text { font-size: 32px; font-weight: 300; color: rgba(255,255,255,0.5); }
+    .vt-num { font-size: 40px; font-weight: 700; color: #FFD700; }
+
+    .price { font-size: 108px; font-weight: 900; color: #FF6B47; line-height: 1; letter-spacing: -0.03em; margin-bottom: 12px; }
+    .price-installment { font-size: 26px; color: rgba(255,255,255,0.3); margin-bottom: 64px; }
+
+    .cta {
+      background: linear-gradient(90deg, #FF6B47, #FFD700);
+      color: #0A0805; font-size: 34px; font-weight: 900;
+      letter-spacing: 0.06em; text-transform: uppercase; padding: 32px 80px; border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="left-stripe"></div>
+  <div class="deco-2997">2997</div>
+  <div class="grain"></div>
+  <div class="content">
+    <div class="eyebrow">{{NICHO}}</div>
+    <div class="h1">Venda</div>
+    <div class="h2">sua mentoria</div>
+    <div class="h3">agora</div>
+    <div class="value-tag">
+      <div class="vt-bar"></div>
+      <span class="vt-text">cobra </span>
+      <span class="vt-num">R$2.997</span>
+      <div class="vt-bar"></div>
+      <span class="vt-text">em 8min</span>
+    </div>
+    <div class="price">{{PRICE}}</div>
+    <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

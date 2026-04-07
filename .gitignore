@@ -1,0 +1,28 @@
+# Output e renders gerados
+output/
+*.png
+*.jpg
+*.jpeg
+*.mp4
+
+# Node
+node_modules/
+engine/node_modules/
+
+# Env e secrets
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Versoes internas (manter no repo local, nao publicar)
+_versions/
+
+# Memoria evolutiva privada (nao publicar dados de campanha)
+_memory/approved-patterns.md
+_memory/rejected-patterns.md
+_memory/niche-learnings.md
+_memory/visual-preferences.md
+_memory/copy-preferences.md

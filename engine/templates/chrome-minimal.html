@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Chrome Minimal</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f5f5f5; font-family: 'DM Sans', sans-serif; }
+
+    /* Fundo: branco quase puro com gradiente cinza suave */
+    .bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, #ffffff 0%, #eeeeee 100%);
+    }
+
+    /* Linha preta topo - design editorial */
+    .bar-top {
+      position: absolute; top: 0; left: 0; right: 0; height: 6px;
+      background: #111111;
+    }
+
+    /* Bloco preto lateral esquerda - elemento de design */
+    .block-left {
+      position: absolute; top: 6px; left: 0; width: 140px; height: 320px;
+      background: #111111;
+    }
+
+    .content {
+      position: absolute; top: 0; left: 0; right: 80px; bottom: 640px;
+      display: flex; flex-direction: column; align-items: flex-end;
+      justify-content: center; text-align: right;
+      padding: 160px 80px 60px 200px;
+    }
+
+    .icon-wrap {
+      margin-bottom: 56px;
+      /* ícone alinhado à direita */
+    }
+
+    .nicho {
+      font-size: 18px; font-weight: 700; color: #111111;
+      letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 40px;
+    }
+
+    .headline {
+      font-size: 92px; font-weight: 900; color: #111111;
+      line-height: 0.92; text-transform: uppercase; margin-bottom: 40px;
+      letter-spacing: -0.03em;
+    }
+
+    .accent {
+      font-size: 92px; font-weight: 200; color: #111111;
+      line-height: 0.92; text-transform: uppercase; margin-bottom: 56px;
+      letter-spacing: -0.03em;
+    }
+
+    .subheadline {
+      font-size: 30px; font-weight: 300; color: rgba(0,0,0,0.45);
+      line-height: 1.5; margin-bottom: 80px; max-width: 700px;
+    }
+
+    .price-block { text-align: right; margin-bottom: 72px; }
+
+    .price {
+      font-size: 120px; font-weight: 900; color: #111111;
+      line-height: 1; letter-spacing: -0.04em;
+    }
+
+    .price-installment {
+      font-size: 26px; font-weight: 300; color: rgba(0,0,0,0.4);
+      margin-top: 8px;
+    }
+
+    .cta {
+      background: #111111; color: #ffffff;
+      font-size: 36px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 34px 80px; display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bar-top"></div>
+  <div class="block-left"></div>
+
+  <div class="content">
+    <!-- Ícone: seta diagonal (crescimento) -->
+    <div class="icon-wrap">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 56L56 16" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 16H56V40" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 56L36 36" stroke="#111111" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+      </svg>
+    </div>
+
+    <div class="nicho">{{NICHO}}</div>
+    <div class="headline">{{HEADLINE}}</div>
+    <div class="accent">{{SUBHEADLINE}}</div>
+    <p class="subheadline">Mentoria de R$2.997 entregue em minutos.</p>
+
+    <div class="price-block">
+      <div class="price">{{PRICE}}</div>
+      <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+    </div>
+
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Plum Copper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@200;300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0312; font-family: 'DM Sans', sans-serif; }
+
+    .bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 700px 500px at 50% 35%, rgba(106,5,114,0.2) 0%, transparent 60%),
+                  radial-gradient(ellipse 400px 300px at 80% 70%, rgba(184,115,51,0.08) 0%, transparent 50%),
+                  #0E0312;
+    }
+
+    /* Linhas horizontais decorativas */
+    .rule { position: absolute; left: 80px; right: 80px; height: 1px; }
+    .rule-1 { top: 160px; background: linear-gradient(90deg, rgba(106,5,114,0.4), rgba(184,115,51,0.3), transparent); }
+    .rule-2 { top: 1230px; background: linear-gradient(90deg, rgba(106,5,114,0.4), rgba(184,115,51,0.3), transparent); }
+
+    .grain {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0.12;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    .content {
+      position: absolute; top: 180px; left: 80px; right: 80px; bottom: 700px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center;
+    }
+
+    /* Ícone: chave/key */
+    .icon-wrap { margin-bottom: 60px; }
+
+    .nicho { font-size: 18px; font-weight: 600; color: #B87333; letter-spacing: 0.35em; text-transform: uppercase; margin-bottom: 48px; }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px; font-weight: 700; color: #ffffff;
+      line-height: 1.05; margin-bottom: 16px;
+    }
+    .headline-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px; font-style: italic; color: #B87333;
+      line-height: 1.05; margin-bottom: 48px;
+    }
+
+    /* Divider ornamental */
+    .ornament { display: flex; align-items: center; gap: 16px; margin-bottom: 48px; }
+    .orn-line { flex: 1; height: 1px; background: rgba(184,115,51,0.25); }
+    .orn-diamond { width: 8px; height: 8px; background: #B87333; transform: rotate(45deg); }
+
+    .sub { font-size: 30px; font-weight: 200; color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 72px; }
+
+    /* Preço com glow plum */
+    .price-wrap { position: relative; margin-bottom: 16px; }
+    .price-glow {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 500px; height: 200px;
+      background: radial-gradient(ellipse, rgba(106,5,114,0.3) 0%, transparent 70%);
+      filter: blur(40px);
+    }
+    .price {
+      position: relative;
+      font-size: 116px; font-weight: 700;
+      background: linear-gradient(135deg, #B87333, #E8A96B, #B87333);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      line-height: 1; letter-spacing: -0.02em;
+    }
+    .price-installment { font-size: 28px; color: rgba(255,255,255,0.25); margin-bottom: 72px; }
+
+    .cta {
+      border: 1.5px solid #B87333; color: #B87333;
+      font-size: 34px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 32px 80px; border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="rule rule-1"></div>
+  <div class="rule rule-2"></div>
+  <div class="grain"></div>
+  <div class="content">
+    <div class="icon-wrap">
+      <!-- Ícone: chave elegante -->
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+        <circle cx="26" cy="32" r="14" stroke="#B87333" stroke-width="2" fill="rgba(184,115,51,0.06)"/>
+        <circle cx="26" cy="32" r="7" stroke="#B87333" stroke-width="1.5" opacity="0.4"/>
+        <path d="M36 38L58 60" stroke="#B87333" stroke-width="2" stroke-linecap="round"/>
+        <path d="M48 50L54 44" stroke="#B87333" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="nicho">{{NICHO}}</div>
+    <div class="headline">Venda sua mentoria</div>
+    <div class="headline-value">por R$2.997</div>
+    <div class="ornament"><div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line"></div></div>
+    <p class="sub">Organize seu conhecimento em 8 minutos e cobre o que você realmente vale.</p>
+    <div class="price-wrap">
+      <div class="price-glow"></div>
+      <div class="price">{{PRICE}}</div>
+    </div>
+    <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

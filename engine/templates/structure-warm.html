@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=1080" />
+  <title>Structure Warm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#F5EFE6;font-family:'DM Sans',sans-serif}
+    .bg{position:absolute;inset:0;background:linear-gradient(150deg,#FAF5EE 0%,#EDE3D4 100%)}
+    /* Faixa marrom no topo */
+    .top-bar{position:absolute;top:0;left:0;right:0;height:8px;background:#5C3D2E}
+    /* Bloco marrom lateral */
+    .side-block{position:absolute;top:8px;left:0;width:120px;height:400px;background:#5C3D2E}
+    .content{position:absolute;top:0;left:0;right:60px;bottom:640px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;text-align:right;padding:100px 80px 60px 180px}
+    .nicho{font-size:18px;font-weight:700;color:#5C3D2E;letter-spacing:.35em;text-transform:uppercase;margin-bottom:44px}
+    .h1{font-family:'Playfair Display',serif;font-size:82px;font-weight:700;color:#1A0F0A;line-height:1.05;margin-bottom:8px}
+    .h2{font-family:'Playfair Display',serif;font-size:82px;font-style:italic;color:#5C3D2E;line-height:1.05;margin-bottom:48px}
+    .body{font-size:30px;font-weight:300;color:rgba(0,0,0,.45);line-height:1.6;margin-bottom:56px;max-width:780px}
+    .sep{width:60px;height:2px;background:#5C3D2E;margin:0 0 48px auto}
+    .start{font-size:26px;color:rgba(0,0,0,.4);margin-bottom:44px}
+    .start span{color:#5C3D2E;font-weight:700}
+    .price{font-size:112px;font-weight:700;color:#5C3D2E;line-height:1;letter-spacing:-.03em;margin-bottom:10px}
+    .inst{font-size:26px;color:rgba(0,0,0,.3);margin-bottom:64px}
+    .cta{background:#5C3D2E;color:#FAF5EE;font-size:34px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:30px 80px;display:inline-block}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="top-bar"></div><div class="side-block"></div>
+  <div class="content">
+    <div class="nicho">{{NICHO}}</div>
+    <div class="h1">Estruture a sua mentoria</div>
+    <div class="h2">e venda por R$2.997</div>
+    <p class="body">Organize seu conhecimento e comece a cobrar o que você realmente vale.</p>
+    <div class="sep"></div>
+    <div class="start">comece agora por <span>{{PRICE}}</span></div>
+    <div class="price">{{PRICE}}</div>
+    <div class="inst">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

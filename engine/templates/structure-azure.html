@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=1080" />
+  <title>Structure Azure</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#F0F6FF;font-family:'DM Sans',sans-serif}
+    /* Fundo: branco frio com toque azul */
+    .bg{position:absolute;inset:0;background:linear-gradient(145deg,#FFFFFF 0%,#E8F2FF 100%)}
+    /* Bloco azul no topo */
+    .top-block{position:absolute;top:0;left:0;right:0;height:500px;background:#0A4FCC;clip-path:polygon(0 0,100% 0,100% 80%,0 100%)}
+    .top-content{position:absolute;top:80px;left:80px;right:80px}
+    .top-nicho{font-size:18px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:.35em;text-transform:uppercase;margin-bottom:32px}
+    .top-h{font-size:84px;font-weight:900;color:#fff;line-height:.92;text-transform:uppercase;letter-spacing:-.02em}
+    /* Conteúdo abaixo */
+    .content{position:absolute;top:520px;left:80px;right:80px;bottom:640px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+    .sub-label{font-size:24px;font-weight:200;color:rgba(0,0,0,.35);margin-bottom:16px}
+    .value{font-size:72px;font-weight:900;color:#0A4FCC;line-height:1;letter-spacing:-.02em;margin-bottom:52px}
+    .body{font-size:30px;font-weight:300;color:rgba(0,0,0,.4);line-height:1.5;margin-bottom:56px;max-width:840px}
+    .start-row{display:flex;align-items:center;gap:16px;margin-bottom:52px}
+    .sr-bar{width:36px;height:2px;background:#0A4FCC}
+    .sr-text{font-size:28px;color:rgba(0,0,0,.45)}
+    .sr-val{font-size:28px;font-weight:700;color:#0A4FCC}
+    .price{font-size:112px;font-weight:900;color:#0A4FCC;line-height:1;letter-spacing:-.03em;margin-bottom:10px}
+    .inst{font-size:26px;color:rgba(0,0,0,.3);margin-bottom:64px}
+    .cta{background:#0A4FCC;color:#fff;font-size:34px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:30px 80px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="top-block"></div>
+  <div class="top-content">
+    <div class="top-nicho">{{NICHO}}</div>
+    <div class="top-h">Estruture<br>sua mentoria</div>
+  </div>
+  <div class="content">
+    <div class="sub-label">e venda</div>
+    <div class="value">por R$2.997</div>
+    <p class="body">Organize seu conhecimento e transforme o que você sabe em renda real.</p>
+    <div class="start-row">
+      <div class="sr-bar"></div>
+      <span class="sr-text">comece agora por</span>
+      <span class="sr-val">{{PRICE}}</span>
+    </div>
+    <div class="price">{{PRICE}}</div>
+    <div class="inst">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

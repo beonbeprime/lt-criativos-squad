@@ -1,0 +1,220 @@
+# Base de Conhecimento - Padroes dos Criativos Campeoes
+# Produto: Agente Arquiteto (R$67) - Arquiteto High Ticket
+# Atualizado automaticamente pelo squad a cada analise
+
+champions:
+  - id: feed-branco-marmore
+    file: "C:/Users/Pichau/Desktop/Validados/feed branco marmore.png"
+    format: feed
+    dimensions: "1350x1080"
+    theme: luxury-clean
+    background:
+      type: texture
+      description: "Marmore branco com veios dourados, limpo e sofisticado"
+      dominant_colors:
+        - "#FFFFFF"
+        - "#F5F0E8"
+        - "#C9A84C"
+      texture_density: alta
+    person:
+      present: true
+      position: right
+      style: "Homem careca, terno cinza escuro, olhando para o lado, expressao seria"
+      focal_point: "meio-direita da imagem"
+    copy:
+      h1: "Sua mentoria pronta"
+      accent: "em 8 minutos"
+      anchor: "Transforme anos de conhecimento em uma mentoria de R$ 2.997,00"
+      price_strategy: anchor
+      price_display: "De R$ 297 por apenas R$67,00"
+      cta: "Toque no botao e conheca nosso agente Arquiteto High Ticket"
+    typography:
+      h1_style: "Serif italic, tamanho grande, peso bold"
+      accent_color: "dourado #C9A84C"
+      anchor_style: "sans-serif, tamanho medio, branco ou cinza claro"
+      cta_color: "dourado"
+      cta_style: "sans-serif, capslock ou normal"
+    layout:
+      text_area: "metade esquerda"
+      visual_area: "metade direita"
+      hierarchy: "H1 > Accent > Ancora > Preco > CTA"
+    why_winner: "Combinacao de luxury + ancora de preco R$297 para R$67. Contraste entre alto valor percebido e preco acessivel. Presenca humana gera credibilidade. Marmore transmite sofisticacao sem ser agressivo."
+    score: 92
+    performance_notes: "Campecao principal de Feed. Base para variacoes V1-V3."
+
+  - id: feed-dark-cinematic
+    file: "C:/Users/Pichau/Desktop/Criativos Validados/campecao/feed.png"
+    format: feed
+    dimensions: "1350x1080"
+    theme: dark-cinematic
+    background:
+      type: dramatic
+      description: "Fundo preto absoluto com circulo neon vermelho iluminando atras da pessoa"
+      dominant_colors:
+        - "#000000"
+        - "#CC0000"
+        - "#FFFFFF"
+      lighting: "dramatico de baixo para cima"
+    person:
+      present: true
+      position: right
+      style: "Homem careca, roupa preta total, iluminacao lateral vermelha, olhar intenso"
+      focal_point: "direita centralizado"
+    copy:
+      h1: "Sua mentoria pronta"
+      accent: "em 8 minutos"
+      anchor: "Transforme anos de conhecimento em uma mentoria de R$ 2.997,00"
+      price_strategy: installment
+      price_display: "por apenas 10x de R$8,05"
+      cta: "Toque no botao e conheca nosso agente Arquiteto High Ticket"
+    typography:
+      h1_style: "Sans-serif bold, branco, tamanho grande"
+      accent_color: "vermelho #CC0000"
+      price_style: "grande, destaque maximo, vermelho ou branco"
+      cta_color: "vermelho ou laranja"
+    layout:
+      text_area: "metade esquerda"
+      visual_area: "metade direita"
+      hierarchy: "H1 > Accent > Ancora > Parcelamento > CTA"
+    why_winner: "Parcelamento R$8,05 elimina barreira psicologica de preco. Visual dramatico para scroll-stop garantido. Neon vermelho cria urgencia visual sem palavras. Contraste preto/vermelho/branco e maximo."
+    score: 95
+    performance_notes: "Campecao absoluto. Maior taxa de conversao registrada. SEMPRE usar como base de escala."
+
+  - id: fogo-storie
+    file: "C:/Users/Pichau/Desktop/Validados/fogo sua mentoria storie.png"
+    format: story
+    dimensions: "1080x1920"
+    theme: dramatic-fire
+    background:
+      type: dramatic-element
+      description: "Parede de concreto industrial com fogo ao redor de uma placa preta central"
+      dominant_colors:
+        - "#1A1A1A"
+        - "#FF4500"
+        - "#FF8C00"
+      lighting: "fogo como fonte de luz, laranja quente"
+    person:
+      present: false
+    design_element:
+      type: "Placa/billboard preta com borda de fogo"
+      description: "Placa retangular preta no centro superior, cercada por chamas, texto branco dentro da placa"
+      position: "centro superior, respeitando safe zone"
+    copy:
+      h1: "Sua mentoria pronta em 8 minutos"
+      anchor_short: "venda por R$2.997"
+      price_display: "apenas 67"
+    typography:
+      h1_style: "Bold branco, dentro da placa preta"
+      price_style: "Grande, vermelho-laranja, destaque maximo"
+    layout:
+      safe_zone: "respeitada - elementos concentrados no terco superior e medio"
+    why_winner: "Elemento de fogo garante scroll-stop em qualquer feed. Placa como dispositivo de atencao direciona o olhar. Contraste R$2.997 vs R$67 e instantaneamente compreendido. Sem pessoa, mais universal."
+    score: 88
+    performance_notes: "Forte em Story/Reels. Tema de fogo nao satura. V8 pode usar variacoes extremas deste tema."
+
+  - id: placa-charuto-storie
+    file: "C:/Users/Pichau/Desktop/Validados/placa charuto storie.png"
+    format: story
+    dimensions: "1080x1920"
+    theme: aspirational-luxury
+    background:
+      type: lifestyle
+      description: "Bar premium de charutos, madeira escura, iluminacao quente e aconchegante"
+      dominant_colors:
+        - "#3D2B1F"
+        - "#8B6914"
+        - "#F5E6C8"
+      lighting: "quente, aconchegante, premium"
+    person:
+      present: true
+      position: background
+      style: "Homem desfocado ao fundo, fumando charuto, sentado em poltrona de couro"
+      focal_point: "fundo desfocado, elemento decorativo"
+    design_element:
+      type: "Lousa de giz em cavalete"
+      description: "Lousa preta em cavalete de madeira no centro da cena, texto escrito a giz branco"
+      style: "handwritten, informal, autentico"
+    copy:
+      text_on_sign: "SUA MENTORIA / PRONTA EM 8 MINUTOS / VENDA POR / R$2.997 / APENAS 67"
+    typography:
+      style: "Giz branco em lousa preta, estilo handwritten"
+    layout:
+      safe_zone: "lousa posicionada no terco superior e medio"
+    why_winner: "Aspiracao de vida de sucesso sem ser vulgar. Charuto = conquista e celebracao. Lousa e completamente diferente de qualquer criativo do mercado. Premium sem ser intimidador. Desfocado da pessoa humaniza sem depender de presenca forte."
+    score: 86
+    performance_notes: "Excelente para publico masculino 35-55. Tema unico no segmento."
+
+  - id: dollar-branco
+    file: "C:/Users/Pichau/Desktop/Validados/Dollar Branco.png"
+    format: story
+    dimensions: "1080x1920"
+    theme: wealth-money
+    background:
+      type: abundance
+      description: "Fundo branco com notas de dolar voando e caindo organicamente"
+      dominant_colors:
+        - "#FFFFFF"
+        - "#4CAF50"
+        - "#2E7D32"
+      texture: "notas de dolar em movimento, distribuidas por todo o fundo"
+    person:
+      present: false
+    copy:
+      h1: "Sua mentoria pronta"
+      accent: "em 8 minutos"
+      anchor: "Transforme anos de conhecimento em uma mentoria de R$ 2.997,00"
+      cta: "Conheca o agente de IA"
+      cta_style: "Botao verde"
+    typography:
+      h1_style: "Serif bold, cor escura (preto ou marrom)"
+      accent_color: "verde dolar #4CAF50"
+    layout:
+      safe_zone: "respeitada - texto concentrado no terco superior e medio"
+    why_winner: "Associacao direta dinheiro e mentoria sem precisar de argumento. Fundo branco com elementos flutuantes e diferente dos fundos escuros dominantes. Chama atencao em feed escuro. Botao verde reforco da associacao com dinheiro."
+    score: 84
+    performance_notes: "Forte em publicos de expansao. Fundo branco se destaca em feeds escuros. Testar em Mobile Feed."
+
+# Padroes extraidos dos campeoes
+extracted_patterns:
+  visual:
+    - "Contraste extremo (preto vs branco, ou escuro vs neon) e presente nos top 3"
+    - "Pessoa presente em 3 de 5 campeoes - nao e obrigatoria mas ajuda"
+    - "Elemento central (placa, circulo, billboard) direciona o olhar antes do texto"
+    - "Fundo com textura ou elemento visual (marmore, fogo, dolar) supera fundos lisos"
+    - "Iluminacao dramatica correlaciona com maior scroll-stop"
+
+  copy:
+    - "H1 'Sua mentoria pronta em 8 minutos' aparece em todos os campeoes (variacao minima)"
+    - "Ancora de valor R$2.997 presente em 4 de 5 campeoes"
+    - "Preco R$67 sempre visivel - nunca escondido"
+    - "Parcelamento 10x R$8,05 reduz barreira de entrada em campanhas de escala"
+    - "CTA sempre referencia 'Arquiteto High Ticket' como nome do produto"
+
+  theme_performance:
+    dark_cinematic: "Top 1 - maior conversao registrada"
+    luxury_clean: "Top 2 - mais estavel e consistente"
+    dramatic_fire: "Top 3 - excelente scroll-stop"
+    aspirational_luxury: "Top 4 - nicho masculino especifico"
+    wealth_money: "Top 5 - bom para expansao de publico"
+
+# Copy universal (fixo em todos os criativos)
+copy_formulas:
+  universal_h1: "Sua mentoria pronta"
+  universal_accent: "em 8 minutos"
+  universal_anchor_value: "R$ 2.997,00"
+  product_name: "Agente Arquiteto"
+  cta_name: "Arquiteto High Ticket"
+  price_options:
+    - display: "R$67,00"
+      strategy: direct
+    - display: "De R$297 por apenas R$67"
+      strategy: anchor
+    - display: "10x de R$8,05"
+      strategy: installment
+    - display: "apenas 67"
+      strategy: minimal
+  cta_options:
+    - "Arquiteto High Ticket"
+    - "Toque no botao e conheca nosso agente Arquiteto High Ticket"
+    - "Conheca o agente de IA"
+    - "Acesse por R$67"

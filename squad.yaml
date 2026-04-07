@@ -1,0 +1,691 @@
+id: lt-criativos
+name: "Low Ticket Creative Squad (Zeuz)"
+version: "2.0.0"
+description: |
+  Squad especializado em criacao de criativos de alta conversao para produtos low ticket.
+  Multi-produto, multi-nicho. Aceita qualquer segmento e preco entre R$9 e R$297.
+  Opera em 8 camadas com 69 agentes, motor HTML+Playwright, memoria evolutiva e
+  geracao interna 3x com selecao dos melhores para entrega.
+author: "Allysson Silveira / Synkra AIOS"
+category: creative-production
+
+tags:
+  - low-ticket
+  - criativos
+  - ads
+  - copy
+  - lovart
+  - playwright
+  - meta-ads
+  - multi-produto
+  - multi-nicho
+
+agents:
+  lead:
+    id: lt-intel-master
+    persona: "Vox"
+    role: "Orquestrador principal do squad"
+    file: agents/lt-intel-master.md
+
+  members:
+    # CAMADA 0 - ORQUESTRACAO (8 agentes)
+    - id: executive-director
+      persona: "Zeuz"
+      role: "Diretor Executivo - visao geral e aprovacao macro"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/executive-director.md
+
+    - id: master-router
+      persona: "Rota"
+      role: "Roteador Mestre - interpreta demanda e ativa camadas"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/master-router.md
+
+    - id: flow-coordinator
+      persona: "Flux"
+      role: "Coordenador de Fluxo - sequencia e dependencias"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/flow-coordinator.md
+
+    - id: task-manager
+      persona: "Task"
+      role: "Gerente de Tarefas - quebra em subtarefas"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/task-manager.md
+
+    - id: state-controller
+      persona: "Status"
+      role: "Controlador de Estado - rastreia cada criativo"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/state-controller.md
+
+    - id: evolutionary-memory
+      persona: "Memo"
+      role: "Memoria Evolutiva - registra preferencias e feedback"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/evolutionary-memory.md
+
+    - id: demand-classifier
+      persona: "Peso"
+      role: "Classificador de Peso - define nivel MICRO/LEVE/MEDIO/MAX"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/demand-classifier.md
+
+    - id: resource-optimizer
+      persona: "Eco"
+      role: "Otimizador de Recursos - curto-circuita quando qualidade ja atingida"
+      tier: 0
+      camada: "orquestracao"
+      file: agents/resource-optimizer.md
+
+    # CAMADA 1 - INTELIGENCIA (10 agentes: 7 existentes + 3 novos)
+    - id: champion-researcher
+      persona: "Scout"
+      role: "Pesquisa e catalogacao de criativos campeoes"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/champion-researcher.md
+
+    - id: visual-pattern-analyst
+      persona: "Vis"
+      role: "Analise de padroes visuais dos campeoes"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/visual-pattern-analyst.md
+
+    - id: copy-pattern-analyst
+      persona: "Leo"
+      role: "Analise de padroes de copy dos campeoes"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/copy-pattern-analyst.md
+
+    - id: data-specialist
+      persona: "Stat"
+      role: "Coleta e organizacao de dados de performance"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/data-specialist.md
+
+    - id: data-comparator
+      persona: "Diff"
+      role: "Comparacao entre criativos e identificacao de gaps"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/data-comparator.md
+
+    - id: color-style-analyst
+      persona: "Prism"
+      role: "Analise de paleta e estilo visual"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/color-style-analyst.md
+
+    - id: background-analyst
+      persona: "Lens"
+      role: "Analise e classificacao de backgrounds"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/background-analyst.md
+
+    - id: niche-researcher
+      persona: "Nix"
+      role: "Pesquisador de Nicho - vocabulario, dores, desejos"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/niche-researcher.md
+
+    - id: audience-researcher
+      persona: "Aura"
+      role: "Pesquisadora de Publico - perfil psicologico e consciencia"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/audience-researcher.md
+
+    - id: offer-researcher
+      persona: "Ofra"
+      role: "Pesquisador de Oferta - promessa, mecanismo e valor"
+      tier: 1
+      camada: "inteligencia"
+      file: agents/offer-researcher.md
+
+    # CAMADA 2 - ESTRATEGIA DE MENSAGEM (8 agentes novos)
+    - id: identification-specialist
+      persona: "Ident"
+      role: "Especialista em Identificacao - publico se reconhece?"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/identification-specialist.md
+
+    - id: clarity-specialist
+      persona: "Clair"
+      role: "Especialista em Clareza - entendimento em 3 segundos"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/clarity-specialist.md
+
+    - id: promise-specialist
+      persona: "Prom"
+      role: "Especialista em Promessa - resultado + prazo + remocao de objecao"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/promise-specialist.md
+
+    - id: verbal-hook-specialist
+      persona: "Verb"
+      role: "Especialista em Hook Verbal - headlines fortes e curtas"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/verbal-hook-specialist.md
+
+    - id: visual-hook-specialist
+      persona: "Vis2"
+      role: "Especialista em Hook Visual - elemento de parada no feed"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/visual-hook-specialist.md
+
+    - id: pain-desire-specialist
+      persona: "Paix"
+      role: "Especialista em Dor e Desejo - tensao emocional"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/pain-desire-specialist.md
+
+    - id: lt-knowledge-specialist
+      persona: "LTK"
+      role: "Especialista LT - aplica 7 principios do low ticket"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/lt-knowledge-specialist.md
+
+    - id: segment-context-specialist
+      persona: "Seg"
+      role: "Especialista em Segmento - linguagem e palavra-chave do nicho"
+      tier: 2
+      camada: "estrategia-mensagem"
+      file: agents/segment-context-specialist.md
+
+    # CAMADA 3 - ESTRATEGIA (6 agentes existentes)
+    - id: lt-strategist
+      persona: "Apex"
+      role: "Estrategista de variacao e escala"
+      tier: 3
+      camada: "estrategia"
+      file: agents/lt-strategist.md
+
+    - id: batch-planner
+      persona: "Grid"
+      role: "Planejamento de batches"
+      tier: 3
+      camada: "estrategia"
+      file: agents/batch-planner.md
+
+    - id: briefing-creator
+      persona: "Brief"
+      role: "Criacao de briefings estruturados"
+      tier: 3
+      camada: "estrategia"
+      file: agents/briefing-creator.md
+
+    - id: variation-architect
+      persona: "Arch"
+      role: "Arquitetura da matriz 2+8"
+      tier: 3
+      camada: "estrategia"
+      file: agents/variation-architect.md
+
+    - id: hook-specialist
+      persona: "Hook"
+      role: "Ganchos e headlines para LT"
+      tier: 3
+      camada: "estrategia"
+      file: agents/hook-specialist.md
+
+    - id: edi-researcher
+      persona: "Edi"
+      role: "Elementos de diferenciacao e impacto"
+      tier: 3
+      camada: "estrategia"
+      file: agents/edi-researcher.md
+
+    # CAMADA 4 - COPY (12 agentes: 6 existentes + 6 novos)
+    - id: lt-copywriter
+      persona: "Vera"
+      role: "Copywriter especializado em Low Ticket"
+      tier: 4
+      camada: "copy"
+      file: agents/lt-copywriter.md
+
+    - id: headline-specialist
+      persona: "Head"
+      role: "Headlines e H1 de criativo"
+      tier: 4
+      camada: "copy"
+      file: agents/headline-specialist.md
+
+    - id: cta-specialist
+      persona: "Call"
+      role: "CTA e botoes de acao"
+      tier: 4
+      camada: "copy"
+      file: agents/cta-specialist.md
+
+    - id: copy-validator
+      persona: "Check"
+      role: "Validacao de copy contra regras proibidas"
+      tier: 4
+      camada: "copy"
+      file: agents/copy-validator.md
+
+    - id: copy-killer-engine
+      persona: "Kill"
+      role: "Motor Copy Killer integrado"
+      tier: 4
+      camada: "copy"
+      file: agents/copy-killer-engine.md
+
+    - id: anti-grouping-agent
+      persona: "Spread"
+      role: "Diversidade anti-agrupamento Meta Ads"
+      tier: 4
+      camada: "copy"
+      file: agents/anti-grouping-agent.md
+
+    - id: first-gen-copywriter
+      persona: "Burst"
+      role: "Gera volume massivo de variacoes brutas"
+      tier: 4
+      camada: "copy"
+      file: agents/first-gen-copywriter.md
+
+    - id: commercial-tension-copywriter
+      persona: "Tens"
+      role: "Refina agressividade e tensao comercial"
+      tier: 4
+      camada: "copy"
+      file: agents/commercial-tension-copywriter.md
+
+    - id: simplification-copywriter
+      persona: "Cut"
+      role: "Encurta copy sem perder forca"
+      tier: 4
+      camada: "copy"
+      file: agents/simplification-copywriter.md
+
+    - id: copy-reviewer
+      persona: "Rev"
+      role: "Revisao final de copy"
+      tier: 4
+      camada: "copy"
+      file: agents/copy-reviewer.md
+
+    - id: interpretive-clarity-agent
+      persona: "Nita"
+      role: "Clareza interpretativa, coerencia e naturalidade de fala"
+      tier: 4
+      camada: "copy"
+      file: agents/interpretive-clarity-agent.md
+
+    - id: anti-generic-auditor
+      persona: "Kill2"
+      role: "Elimina frases fracas e cliches"
+      tier: 4
+      camada: "copy"
+      file: agents/anti-generic-auditor.md
+
+    - id: anti-ai-auditor
+      persona: "Human"
+      role: "Detecta linguagem robotica e vibe de IA"
+      tier: 4
+      camada: "copy"
+      file: agents/anti-ai-auditor.md
+
+    # CAMADA 5 - DIRECAO VISUAL (5 agentes novos)
+    - id: art-director-lt
+      persona: "Arte"
+      role: "Diretor de Arte LT - conceito visual completo"
+      tier: 5
+      camada: "direcao-visual"
+      file: agents/art-director-lt.md
+
+    - id: photo-mockup-specialist
+      persona: "Mock"
+      role: "Aparencia fotografica realista"
+      tier: 5
+      camada: "direcao-visual"
+      file: agents/photo-mockup-specialist.md
+
+    - id: realism-specialist
+      persona: "Real"
+      role: "Imperfeicoes fotograficas e naturalidade"
+      tier: 5
+      camada: "direcao-visual"
+      file: agents/realism-specialist.md
+
+    - id: scene-variation-specialist
+      persona: "Cena"
+      role: "Diversidade de cenas no batch"
+      tier: 5
+      camada: "direcao-visual"
+      file: agents/scene-variation-specialist.md
+
+    - id: human-presence-specialist
+      persona: "Ros"
+      role: "Decisao sobre uso de rosto"
+      tier: 5
+      camada: "direcao-visual"
+      file: agents/human-presence-specialist.md
+
+    # CAMADA 6 - PRODUCAO (5 agentes existentes)
+    - id: lovart-prompt-engineer
+      persona: "Craft"
+      role: "Engenheiro de prompts Lovart"
+      tier: 6
+      camada: "producao"
+      file: agents/lovart-prompt-engineer.md
+
+    - id: prompt-validator
+      persona: "Guard"
+      role: "Validacao de prompts"
+      tier: 6
+      camada: "producao"
+      file: agents/prompt-validator.md
+
+    - id: vertical-format-agent
+      persona: "Vert"
+      role: "Formato vertical 9:16 e safe zone"
+      tier: 6
+      camada: "producao"
+      file: agents/vertical-format-agent.md
+
+    - id: image-quality-analyst
+      persona: "Eye"
+      role: "Qualidade das imagens geradas"
+      tier: 6
+      camada: "producao"
+      file: agents/image-quality-analyst.md
+
+    - id: safe-zone-auditor
+      persona: "Zone"
+      role: "Auditoria de safe zone"
+      tier: 6
+      camada: "producao"
+      file: agents/safe-zone-auditor.md
+
+    # CAMADA 7 - FORMATO E ENTREGA (5 agentes existentes)
+    - id: intelligent-crop-agent
+      persona: "Crop"
+      role: "Corte inteligente Story para Feed"
+      tier: 7
+      camada: "formato-entrega"
+      file: agents/intelligent-crop-agent.md
+
+    - id: safe-area-detector
+      persona: "Face"
+      role: "Deteccao de rostos e elementos"
+      tier: 7
+      camada: "formato-entrega"
+      file: agents/safe-area-detector.md
+
+    - id: format-packager
+      persona: "Pack"
+      role: "Empacotamento dos formatos"
+      tier: 7
+      camada: "formato-entrega"
+      file: agents/format-packager.md
+
+    - id: batch-organizer
+      persona: "Sort"
+      role: "Organizacao de batches"
+      tier: 7
+      camada: "formato-entrega"
+      file: agents/batch-organizer.md
+
+    - id: delivery-agent
+      persona: "Send"
+      role: "Entrega final com relatorio"
+      tier: 7
+      camada: "formato-entrega"
+      file: agents/delivery-agent.md
+
+    # CAMADA 8 - AVALIACAO (9 agentes: 4 existentes + 5 novos)
+    - id: creative-director
+      persona: "Rex"
+      role: "Direcao criativa e aprovacao final"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/creative-director.md
+
+    - id: lt-quality-scorer
+      persona: "Judge"
+      role: "Score 0-100 usando as 9 dimensoes"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/lt-quality-scorer.md
+
+    - id: compliance-checker
+      persona: "Law"
+      role: "Compliance Meta Ads"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/compliance-checker.md
+
+    - id: iteration-manager
+      persona: "Loop"
+      role: "Gerenciamento de retrabalho"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/iteration-manager.md
+
+    - id: clarity-evaluator
+      persona: "Lux"
+      role: "Avalia clareza da mensagem (dimensao 1)"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/clarity-evaluator.md
+
+    - id: identification-evaluator
+      persona: "Match"
+      role: "Avalia identificacao do publico (dimensao 2)"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/identification-evaluator.md
+
+    - id: commercial-strength-evaluator
+      persona: "Conv"
+      role: "Avalia forca comercial (dimensoes 8 e 9)"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/commercial-strength-evaluator.md
+
+    - id: naturalness-evaluator
+      persona: "Nat"
+      role: "Avalia naturalidade anti-IA (dimensao 7)"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/naturalness-evaluator.md
+
+    - id: final-curator
+      persona: "Pick"
+      role: "Curador Final - seleciona melhores para entrega"
+      tier: 8
+      camada: "avaliacao"
+      file: agents/final-curator.md
+
+pipeline:
+  workflow: lt-full-pipeline
+  file: workflows/lt-full-pipeline.md
+  phases:
+    - id: intake
+      name: "Intake e Perguntas Obrigatorias"
+      tasks:
+        - 01-analyze-champions
+
+    - id: memory-load
+      name: "Carregar Memoria do Projeto"
+      tasks: []
+
+    - id: niche-research
+      name: "Pesquisa de Nicho e Publico"
+      tasks:
+        - 02-extract-patterns
+
+    - id: ingest-refs
+      name: "Ingestao de Referencias"
+      tasks:
+        - 02-extract-patterns
+
+    - id: intel
+      name: "Analise de Campeoes"
+      tasks:
+        - 01-analyze-champions
+        - 02-extract-patterns
+
+    - id: message-strategy
+      name: "Estrategia de Mensagem"
+      tasks:
+        - 12-message-strategy
+
+    - id: strategy
+      name: "Estrategia e Briefing"
+      tasks:
+        - 03-create-briefing
+        - 04-write-copy
+
+    - id: copy-gen
+      name: "Geracao de Copy 3x Volume"
+      tasks:
+        - 04-write-copy
+        - 14-3x-internal-generation
+
+    - id: visual-dir
+      name: "Direcao Visual"
+      tasks:
+        - 13-visual-direction
+
+    - id: production
+      name: "Producao Lovart"
+      tasks:
+        - 05-create-lovart-prompts
+        - 06-validate-prompts
+        - 07-generate-images
+
+    - id: code-render
+      name: "Renderizacao HTML via Playwright"
+      tasks: []
+
+    - id: review
+      name: "Revisao e Safe Zone"
+      tasks:
+        - 08-analyze-images
+        - 09-safe-zone-check
+
+    - id: evaluate
+      name: "Avaliacao 0-100 por 9 Criterios"
+      tasks:
+        - 15-rank-and-select
+
+    - id: rank-select
+      name: "Ranking e Selecao dos Melhores"
+      tasks:
+        - 15-rank-and-select
+
+    - id: deliver
+      name: "Entrega e Atualizacao de Memoria"
+      tasks:
+        - 10-crop-to-feed
+        - 11-package-delivery
+
+capabilities:
+  analyze_champions: true
+  extract_visual_patterns: true
+  extract_copy_patterns: true
+  create_briefings: true
+  write_copy_variations: true
+  generate_lovart_prompts: true
+  safe_zone_audit: true
+  intelligent_crop_feed: true
+  batch_delivery: true
+  evolutionary_memory: true
+  multi_product: true
+  multi_niche: true
+  code_mode_render: true
+  demand_classification: true
+  resource_optimization: true
+  score_9_dimensions: true
+  internal_3x_generation: true
+
+disabled_capabilities:
+  auto_generate_on_schedule: false
+  auto_upload_meta_ads: false
+  auto_ab_test: false
+
+deliverables:
+  formats:
+    story:
+      dimensions: "1080x1920"
+      ratio: "9:16 vertical"
+      safe_zone: "terco inferior livre (Y > 1280)"
+    feed:
+      dimensions: "1350x1080"
+      crop_method: "inteligente - detecta rosto e elementos"
+  generation_rule: "gerar 3x internamente, entregar os melhores"
+  score_threshold: 70
+  per_batch:
+    criativos: "variavel (conforme briefing)"
+    formatos_por_criativo: 2
+    relatorio: "sim - com notas e ranking"
+
+champion_references:
+  folder_validados: "C:/Users/Pichau/Desktop/Validados/"
+  folder_criativos_validados: "C:/Users/Pichau/Desktop/Criativos Validados/"
+  champion_subfolder: "C:/Users/Pichau/Desktop/Criativos Validados/campecao/"
+  data_file: data/champion-patterns.yaml
+
+integrations:
+  lovart_py:
+    project: "C:/Users/Pichau/Desktop/aios/lovart-py/"
+    always_use_reference: true
+  engine:
+    path: "engine/"
+    renderer: "engine/renderer.js"
+    templates: "engine/templates/"
+  copy_killer:
+    mode_auto: true
+    mode_zero: true
+    mode_adapt: true
+  meta_ads:
+    account: "act_1255873236232349"
+    auto_upload: false
+  memory:
+    path: "_memory/"
+    auto_save: true
+
+evaluation:
+  dimensions: 9
+  formula: "(soma_notas x 1.111) arredondada"
+  threshold_delivery: 70
+  criteria:
+    - clareza_mensagem
+    - identificacao_publico
+    - forca_promessa
+    - forca_hook_verbal
+    - forca_hook_visual
+    - harmonia_visual
+    - naturalidade_anti_ia
+    - potencial_clique
+    - potencial_compra
+
+metrics:
+  cpa_target: "variavel por produto"
+  roas_target: 2.0
+  ctr_target: 1.5
+  score_minimo_entrega: 70

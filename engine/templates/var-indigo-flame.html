@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=1080" />
+  <title>Var Indigo Flame</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#060812;font-family:'DM Sans',sans-serif}
+    .bg{position:absolute;inset:0;background:radial-gradient(ellipse 700px 500px at 50% 30%,rgba(35,50,180,0.2) 0%,transparent 55%),radial-gradient(ellipse 400px 300px at 50% 25%,rgba(255,90,20,0.08) 0%,transparent 50%),#060812}
+    .grain{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+    .bar{position:absolute;top:0;left:0;width:6px;height:1240px;background:linear-gradient(180deg,transparent,#2332B4 15%,#FF5A14 50%,transparent)}
+    .content{position:absolute;top:0;left:60px;right:60px;bottom:640px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:120px 60px 60px 80px}
+    .icon-wrap{margin-bottom:56px}
+    .nicho{font-size:18px;font-weight:700;color:#FF5A14;letter-spacing:.35em;text-transform:uppercase;margin-bottom:44px}
+    .h1{font-family:'Playfair Display',serif;font-size:86px;font-weight:700;color:#fff;line-height:1.05;margin-bottom:8px}
+    .h2{font-family:'Playfair Display',serif;font-size:86px;font-style:italic;background:linear-gradient(135deg,#3D55FF,#FF5A14);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.05;margin-bottom:52px}
+    .body{font-size:30px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.5;margin-bottom:72px;max-width:820px}
+    .start-tag{display:inline-flex;align-items:center;gap:16px;margin-bottom:52px}
+    .st-bar{width:36px;height:2px;background:linear-gradient(90deg,#3D55FF,#FF5A14)}
+    .st-text{font-size:28px;color:rgba(255,255,255,.5)}
+    .st-val{font-size:28px;font-weight:700;color:#FF5A14}
+    .price{font-size:116px;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em;margin-bottom:10px}
+    .inst{font-size:26px;color:rgba(255,255,255,.28);margin-bottom:64px}
+    .cta{background:linear-gradient(90deg,#2332B4,#FF5A14);color:#fff;font-size:36px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:32px 80px;border-radius:2px}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="grain"></div><div class="bar"></div>
+  <div class="content">
+    <div class="icon-wrap">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <rect x="10" y="8" width="44" height="48" rx="3" stroke="#3D55FF" stroke-width="2" fill="rgba(61,85,255,.06)"/>
+        <path d="M18 22H46" stroke="#3D55FF" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M18 30H46" stroke="#3D55FF" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M18 38H34" stroke="#3D55FF" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M38 40C38 36.686 40.686 34 44 34C47.314 34 50 36.686 50 40C50 43.314 47.314 46 44 46C40.686 46 38 43.314 38 40Z" stroke="#FF5A14" stroke-width="1.5" fill="rgba(255,90,20,.08)"/>
+        <path d="M41.5 40L43.5 42L46.5 38" stroke="#FF5A14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nicho">{{NICHO}}</div>
+    <div class="h1">Estruture a sua mentoria</div>
+    <div class="h2">e venda por R$2.997</div>
+    <p class="body">Organize o que você sabe e comece a cobrar o que você vale.</p>
+    <div class="start-tag">
+      <div class="st-bar"></div>
+      <span class="st-text">comece agora por</span>
+      <span class="st-val">{{PRICE}}</span>
+    </div>
+    <div class="price">{{PRICE}}</div>
+    <div class="inst">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

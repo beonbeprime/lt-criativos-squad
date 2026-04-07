@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Emerald Wealth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #050f0a; font-family: 'DM Sans', sans-serif; }
+
+    .bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 800px 500px at 50% 35%, rgba(16,120,60,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 400px 400px at 80% 70%, rgba(10,80,40,0.08) 0%, transparent 60%),
+        #050f0a;
+    }
+
+    /* Grade sutil */
+    .grid-overlay {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(20,160,80,0.04) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(20,160,80,0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+
+    /* Linha horizontal decorativa */
+    .deco-line {
+      position: absolute; top: 200px; left: 80px; right: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, #1a9e52, transparent);
+    }
+
+    .content {
+      position: absolute; top: 0; left: 80px; right: 80px; bottom: 640px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center; padding-top: 100px;
+    }
+
+    .icon-wrap { margin-bottom: 64px; }
+
+    .nicho {
+      font-size: 20px; font-weight: 600; color: #1a9e52;
+      letter-spacing: 0.35em; text-transform: uppercase; margin-bottom: 48px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 80px; font-weight: 700; color: #ffffff;
+      line-height: 1.1; margin-bottom: 40px;
+    }
+
+    .subheadline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44px; font-style: italic; color: #1a9e52;
+      line-height: 1.3; margin-bottom: 72px;
+    }
+
+    .divider {
+      width: 1px; height: 60px;
+      background: linear-gradient(180deg, transparent, #1a9e52, transparent);
+      margin: 0 auto 72px;
+    }
+
+    .price {
+      font-size: 112px; font-weight: 700; color: #1a9e52;
+      line-height: 1; letter-spacing: -0.02em; margin-bottom: 16px;
+    }
+
+    .price-installment {
+      font-size: 30px; color: rgba(255,255,255,0.35); margin-bottom: 80px;
+    }
+
+    .cta {
+      border: 2px solid #1a9e52; color: #1a9e52;
+      font-size: 36px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 34px 88px; display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grid-overlay"></div>
+  <div class="deco-line"></div>
+
+  <div class="content">
+    <!-- Ícone: diamante/gem -->
+    <div class="icon-wrap">
+      <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M44 76L8 36L20 12H68L80 36L44 76Z" stroke="#1a9e52" stroke-width="2.5" stroke-linejoin="round" fill="rgba(26,158,82,0.08)"/>
+        <path d="M8 36H80" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M20 12L30 36L44 76" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+        <path d="M68 12L58 36L44 76" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+        <path d="M20 12L44 36L68 12" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <div class="nicho">{{NICHO}}</div>
+    <div class="headline">{{HEADLINE}}</div>
+    <div class="subheadline">{{SUBHEADLINE}}</div>
+    <div class="divider"></div>
+
+    <div class="price">{{PRICE}}</div>
+    <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

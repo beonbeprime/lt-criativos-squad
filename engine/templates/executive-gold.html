@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Executive Gold</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0c0c0e; font-family: 'DM Sans', sans-serif; }
+
+    .bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 900px 600px at 50% 38%, rgba(180,140,40,0.08) 0%, transparent 70%),
+                  #0c0c0e;
+    }
+
+    /* Linha horizontal topo */
+    .line-top {
+      position: absolute; top: 160px; left: 80px; right: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, #C9A84C 30%, #E8D080 50%, #C9A84C 70%, transparent);
+    }
+
+    /* Linha bottom safe zone */
+    .line-bottom {
+      position: absolute; top: 1240px; left: 80px; right: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, #C9A84C 30%, #E8D080 50%, #C9A84C 70%, transparent);
+    }
+
+    .content {
+      position: absolute; top: 180px; left: 80px; right: 80px; bottom: 700px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; gap: 0;
+    }
+
+    .icon-wrap {
+      margin-bottom: 60px;
+    }
+
+    .nicho {
+      font-size: 20px; font-weight: 500; color: #C9A84C; letter-spacing: 0.35em;
+      text-transform: uppercase; margin-bottom: 48px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 76px; font-weight: 700; color: #ffffff;
+      line-height: 1.1; margin-bottom: 20px;
+    }
+
+    .accent-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 76px; font-weight: 700; color: #C9A84C;
+      line-height: 1.1; margin-bottom: 56px;
+    }
+
+    .subheadline {
+      font-size: 34px; font-weight: 300; color: rgba(255,255,255,0.55);
+      line-height: 1.5; margin-bottom: 80px; max-width: 820px;
+    }
+
+    .price-row {
+      display: flex; align-items: baseline; gap: 16px; margin-bottom: 16px;
+      justify-content: center;
+    }
+
+    .price {
+      font-size: 108px; font-weight: 700; color: #C9A84C; line-height: 1;
+      font-family: 'DM Sans', sans-serif; letter-spacing: -0.02em;
+    }
+
+    .price-installment {
+      font-size: 28px; color: rgba(255,255,255,0.35); margin-bottom: 72px;
+    }
+
+    .cta {
+      background: #C9A84C; color: #0c0c0e;
+      font-size: 38px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 36px 96px; border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="line-top"></div>
+  <div class="line-bottom"></div>
+
+  <div class="content">
+    <!-- Ícone: troféu elegante -->
+    <div class="icon-wrap">
+      <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M48 64V78M34 84H62M24 12H14C14 12 14 36 30 42M72 12H82C82 12 82 36 66 42" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 12H66V42C66 55.25 55.25 66 42 66C28.75 66 30 55.25 30 42V12Z" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="48" cy="12" r="0" fill="#C9A84C"/>
+        <path d="M38 34L44 40L58 26" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="nicho">{{NICHO}}</div>
+    <div class="headline">{{HEADLINE}}</div>
+    <div class="accent-text">{{SUBHEADLINE}}</div>
+    <p class="subheadline">Mentoria de R$2.997 entregue em minutos.</p>
+
+    <div class="price">{{PRICE}}</div>
+    <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

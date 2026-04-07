@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Bold Red</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #080808; font-family: 'DM Sans', sans-serif; }
+
+    .bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 700px 700px at 50% 45%, rgba(220,30,30,0.12) 0%, transparent 65%), #080808;
+    }
+
+    /* Barra vermelha vertical esquerda */
+    .bar-left {
+      position: absolute; top: 0; left: 0; width: 8px; height: 1280px;
+      background: linear-gradient(180deg, #CC2020 0%, #FF4040 50%, transparent 100%);
+    }
+
+    /* Número grande decorativo atrás */
+    .deco-number {
+      position: absolute; top: 160px; right: -20px;
+      font-size: 500px; font-weight: 900; color: rgba(200,30,30,0.04);
+      line-height: 1; user-select: none; letter-spacing: -0.05em;
+    }
+
+    .content {
+      position: absolute; top: 0; left: 60px; right: 60px; bottom: 640px;
+      display: flex; flex-direction: column; align-items: flex-start;
+      justify-content: center; padding: 120px 60px 60px 60px;
+    }
+
+    .icon-wrap { margin-bottom: 56px; }
+
+    .nicho {
+      font-size: 22px; font-weight: 700; color: #FF3333;
+      letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 40px;
+    }
+
+    .headline {
+      font-size: 96px; font-weight: 900; color: #ffffff;
+      line-height: 0.95; text-transform: uppercase; margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .headline-accent {
+      font-size: 96px; font-weight: 900; color: #FF3333;
+      line-height: 0.95; text-transform: uppercase; margin-bottom: 52px;
+      letter-spacing: -0.02em;
+    }
+
+    .subheadline {
+      font-size: 34px; font-weight: 400; color: rgba(255,255,255,0.5);
+      line-height: 1.4; margin-bottom: 80px; max-width: 860px;
+    }
+
+    .price-block { margin-bottom: 72px; }
+
+    .price-label {
+      font-size: 20px; font-weight: 500; color: #FF3333;
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 120px; font-weight: 900; color: #ffffff;
+      line-height: 1; letter-spacing: -0.03em;
+    }
+
+    .price-installment {
+      font-size: 30px; color: rgba(255,255,255,0.35); margin-top: 8px;
+    }
+
+    .cta {
+      background: #FF3333; color: #ffffff;
+      font-size: 40px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 36px 88px;
+      border-radius: 0; display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bar-left"></div>
+  <div class="deco-number">8</div>
+
+  <div class="content">
+    <!-- Ícone: raio/energia -->
+    <div class="icon-wrap">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M42 6L18 42H36L30 66L54 30H36L42 6Z" stroke="#FF3333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="rgba(255,51,51,0.1)"/>
+      </svg>
+    </div>
+
+    <div class="nicho">{{NICHO}}</div>
+    <div class="headline">{{HEADLINE}}</div>
+    <div class="headline-accent">{{SUBHEADLINE}}</div>
+    <p class="subheadline">Mentoria de R$2.997 entregue em minutos.</p>
+
+    <div class="price-block">
+      <div class="price-label">Investimento</div>
+      <div class="price">{{PRICE}}</div>
+      <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+    </div>
+
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>

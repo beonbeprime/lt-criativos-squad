@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Luxury Minimal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #F5F5F5;
+      font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    }
+
+    /* Espaço branco estratégico - mais de 40% da arte */
+    .bg {
+      position: absolute;
+      inset: 0;
+      background: #F5F5F5;
+    }
+
+    /* Sutíl gradiente para não ser branco puro */
+    .bg-texture {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 20%, rgba(220, 215, 210, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(215, 210, 205, 0.3) 0%, transparent 40%);
+    }
+
+    /* Conteúdo - espaço vazio acima e abaixo intencional */
+    .content {
+      position: absolute;
+      top: 320px;
+      left: 100px;
+      right: 100px;
+      bottom: 720px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Tag de nicho */
+    .nicho-tag {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #999;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      margin-bottom: 72px;
+    }
+
+    /* Headline - peso normal, não bold - editorial */
+    .headline {
+      font-size: 56px;
+      font-weight: 300;
+      color: #1a1a1a;
+      line-height: 1.2;
+      margin-bottom: 56px;
+      letter-spacing: 0.01em;
+    }
+
+    /* Linha dourada horizontal entre headline e preço */
+    .gold-rule {
+      width: 120px;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+      margin: 0 auto 56px;
+    }
+
+    /* Subheadline */
+    .subheadline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 96px;
+      max-width: 760px;
+    }
+
+    /* Bloco de preço - austero */
+    .price-block {
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    .price-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #999;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* Numeral grande em sans-serif de contraste */
+    .price {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 104px;
+      font-weight: 300;
+      color: #1a1a1a;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .price-installment {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: #888;
+      margin-top: 14px;
+    }
+
+    /* CTA - borda fina sem preenchimento, estilo editorial */
+    .cta-button {
+      display: inline-block;
+      border: 1.5px solid #1a1a1a;
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 28px 72px;
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bg-texture"></div>
+
+  <div class="content">
+    <div class="nicho-tag">{{NICHO}}</div>
+    <h1 class="headline">{{HEADLINE}}</h1>
+    <div class="gold-rule"></div>
+    <p class="subheadline">{{SUBHEADLINE}}</p>
+    <div class="price-block">
+      <div class="price-label">Investimento</div>
+      <div class="price">{{PRICE}}</div>
+      <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+    </div>
+    <div class="cta-button">{{CTA}}</div>
+  </div>
+</body>
+</html>

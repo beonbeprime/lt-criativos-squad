@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Rose Purple</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0D0010; font-family: 'DM Sans', sans-serif; }
+
+    .bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 900px 700px at 50% 30%, rgba(155,93,229,0.16) 0%, transparent 65%),
+                  radial-gradient(ellipse 500px 400px at 80% 70%, rgba(255,107,157,0.1) 0%, transparent 55%),
+                  #0D0010;
+    }
+
+    /* Linha diagonal decorativa */
+    .diagonal {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      overflow: hidden;
+    }
+    .diagonal::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: -100px;
+      width: 3px; height: 1400px;
+      background: linear-gradient(180deg, transparent, rgba(155,93,229,0.3), rgba(255,107,157,0.2), transparent);
+      transform: rotate(25deg);
+      transform-origin: top left;
+    }
+
+    .grain {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0.1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    .content {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 640px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center; padding: 120px 80px 60px;
+    }
+
+    /* Badge topo */
+    .badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      border: 1px solid rgba(255,107,157,0.35);
+      border-radius: 50px; padding: 10px 28px;
+      margin-bottom: 64px;
+    }
+    .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #FF6B9D; }
+    .badge-text { font-size: 22px; font-weight: 500; color: rgba(255,107,157,0.85); letter-spacing: 0.15em; text-transform: uppercase; }
+
+    /* Headline com gradient */
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 88px; font-weight: 700; line-height: 1.05;
+      background: linear-gradient(135deg, #FF6B9D 0%, #C77DFF 50%, #9B5DE5 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 28px;
+    }
+
+    /* Valor destacado */
+    .value-pill {
+      background: rgba(155,93,229,0.15);
+      border: 1px solid rgba(155,93,229,0.3);
+      border-radius: 12px; padding: 20px 48px;
+      margin-bottom: 56px; display: inline-block;
+    }
+    .value-text {
+      font-size: 40px; font-weight: 300; color: rgba(255,255,255,0.7);
+    }
+    .value-number {
+      font-size: 40px; font-weight: 700; color: #C77DFF;
+    }
+
+    /* Ícone clock */
+    .icon-row {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 72px;
+    }
+    .icon-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(155,93,229,0.3)); }
+    .icon-line-r { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(155,93,229,0.3), transparent); }
+    .icon-text { font-size: 24px; font-weight: 300; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; }
+
+    .price { font-size: 116px; font-weight: 900; color: #ffffff; line-height: 1; letter-spacing: -0.03em; margin-bottom: 14px; }
+    .price-installment { font-size: 28px; font-weight: 300; color: rgba(255,255,255,0.3); margin-bottom: 72px; }
+
+    .cta {
+      background: linear-gradient(135deg, #FF6B9D, #9B5DE5);
+      color: #ffffff; font-size: 36px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 34px 88px; border-radius: 8px;
+      box-shadow: 0 0 60px rgba(155,93,229,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="diagonal"></div>
+  <div class="grain"></div>
+  <div class="content">
+    <div class="badge"><div class="badge-dot"></div><span class="badge-text">em 8 minutos</span></div>
+
+    <div class="headline">Venda sua mentoria<br>por R$2.997</div>
+
+    <div class="value-pill">
+      <span class="value-text">Organize seu conhecimento </span>
+      <span class="value-number">agora</span>
+    </div>
+
+    <div class="icon-row">
+      <div class="icon-line"></div>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="14" stroke="#9B5DE5" stroke-width="1.5"/><path d="M18 10V18L23 22" stroke="#9B5DE5" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="icon-text">acesso imediato</span>
+      <div class="icon-line-r"></div>
+    </div>
+
+    <div class="price">{{PRICE}}</div>
+    <div class="price-installment">{{PRICE_INSTALLMENT}}</div>
+    <div class="cta">{{CTA}}</div>
+  </div>
+</body>
+</html>
