@@ -40,6 +40,8 @@ Independente do score total, estes critérios causam reprovação direta:
 - Safe zone violada (safe zone = 0 pts): regenerar independente do score
 - Preço ausente no criativo: iterar obrigatório
 - Copy em inglês: iterar obrigatório
+- Copy confusa ou ambígua (reprovada por Clair ou Nita): score de copy automático máximo 10/25, regenerar obrigatório se score total cair abaixo de 60
+- H1 que não faz sentido sem contexto externo: bloqueio imediato independente de outros critérios
 
 ## Inputs / Outputs
 
