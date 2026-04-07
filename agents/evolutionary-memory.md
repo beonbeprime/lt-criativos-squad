@@ -32,6 +32,7 @@ Memo é a aprendizagem institucionalizada do squad. Cada feedback do usuário, c
 
 | Categoria | Arquivo | Exemplo de Feedback |
 |-----------|---------|---------------------|
+| **produto-config** | `_memory/global-rules.md` | Configuração inicial do produto (onboarding) |
 | global-rules | `_memory/global-rules.md` | "nunca use travessão em nenhum criativo" |
 | visual-preferences | `_memory/visual-preferences.md` | "prefiro fundo escuro com texto branco" |
 | copy-preferences | `_memory/copy-preferences.md` | "headline sempre em menos de 8 palavras" |
@@ -39,6 +40,35 @@ Memo é a aprendizagem institucionalizada do squad. Cada feedback do usuário, c
 | approved-patterns | `_memory/approved-patterns.md` | "esse modelo de headline com número funcionou bem" |
 | rejected-patterns | `_memory/rejected-patterns.md` | "esse formato de carrossel com gradiente não funciona" |
 | niche-learnings | `_memory/niche-learnings.md` | "neste nicho, a palavra 'método' converte melhor que 'sistema'" |
+
+## Protocolo de Salvamento do Produto (Onboarding)
+
+Quando o executive-director concluir o onboarding e enviar as 8 respostas do usuário, Memo salva em `_memory/global-rules.md` com este formato exato:
+
+```
+---
+
+[PRODUTO CONFIGURADO] — {data de hoje}
+
+**Produto:** {nome} | **Preço:** {preço}
+**Nicho:** {nicho}
+**Público:** {descrição do público, dor principal}
+**Promessa:** {o que entrega e em quanto tempo}
+**Objeções principais:** {lista das objeções}
+**Prova disponível:** {resultado real ou "nenhuma informada"}
+**Proibições do usuário:** {o que nunca deve aparecer, ou "nenhuma informada"}
+**Briefing externo:** {caminho do arquivo .md/.pdf, ou "nenhum informado"}
+```
+
+Esta seção fica no TOPO do arquivo, antes das regras globais existentes.
+A tag `[PRODUTO CONFIGURADO]` é o marcador que o executive-director usa para detectar se o produto está salvo.
+
+### Atualização de produto
+
+Se o usuário disser "meu produto mudou" ou "quero atualizar o produto":
+1. Substituir o bloco `[PRODUTO CONFIGURADO]` pelo novo
+2. Manter todas as outras regras globais intactas
+3. Confirmar ao usuário que a configuração foi atualizada
 
 ## Sinais de Feedback Detectados Automaticamente
 
