@@ -7,6 +7,48 @@ e entrega apenas os que atingem score mínimo 70.
 
 ---
 
+## Configuração Inicial — Faça isso uma vez
+
+Antes de gerar criativos, configure o seu produto. O Zeuz Criativos vai salvar essas informações na memória evolutiva e nunca mais vai precisar perguntar de novo.
+
+### Escolha como prefere responder
+
+**Modo VS Code** — O Zeuz pergunta uma de cada vez, você responde no chat:
+
+```
+Zeuz Criativos, vamos configurar meu produto. Pergunta uma coisa de cada vez.
+```
+
+**Modo GPT com áudio** — Melhor para quem quer ir fundo nos detalhes. Abra o ChatGPT, ative o microfone e responda todas as perguntas falando. Depois cole tudo aqui de uma vez:
+
+```
+Zeuz Criativos, vou colar o briefing do meu produto abaixo. Salve e use como padrão para todos os próximos criativos.
+
+[cole aqui a resposta que o GPT gerou com base nas suas falas]
+```
+
+> **Dica:** O áudio no GPT é muito mais rápido do que digitar. Fale com detalhes — quanto mais contexto você der, mais precisos ficam os criativos.
+
+### Perguntas que o Zeuz vai fazer (ou que você responde no GPT)
+
+```
+1. Qual é o nome do produto e o preço?
+2. Qual é o nicho? (ex: emagrecimento, produtividade, finanças pessoais)
+3. Quem é o público? (idade, situação, dor principal)
+4. Qual é a promessa principal do produto? (o que ele entrega em quanto tempo)
+5. Quais são as principais objeções do público? (o que impede de comprar)
+6. Tem alguma prova ou resultado real que pode aparecer? (ex: "perdi 7kg em 21 dias")
+7. Tem algo que NUNCA deve aparecer nos criativos?
+8. Tem um documento ou arquivo .md com briefing completo? Se sim, cole o caminho aqui.
+```
+
+> **Tem um .md ou PDF com tudo isso?** Cole o caminho do arquivo direto no Claude Code:
+> `Zeuz Criativos, meu briefing está em C:/Users/Pichau/Desktop/briefing-produto.md — leia e salve como padrão.`
+
+Depois de configurar, todos os próximos criativos já vão sair alinhados com o seu produto. Sem precisar repetir.
+
+---
+
 ## Quick Start
 
 ```bash
