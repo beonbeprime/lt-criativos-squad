@@ -96,24 +96,27 @@
       box-shadow: 0 0 60px rgba(155,93,229,0.3);
     }
   
-    /* === REGRAS ANTI-QUEBRA (global) === */
+    /* === REGRAS ANTI-QUEBRA + MARGEM SEGURA (global) === */
     /* Preços e valores monetários nunca quebram linha */
     .price,.inst,.price-installment,.vr-num,.sr-val,.badge-price,
-    .start,.start span,.value,.value-row,.vr-label+.vr-num,
-    .accent-text,.price-row,.price-wrapper .price,
+    .start span,.value,.vr-label+.vr-num,
+    .price-row,.price-wrapper .price,
     .cta-text,.note,.start-note,.hero-value {
       white-space: nowrap;
     }
     /* Títulos sem hifenização automática */
     .headline,.subheadline,.h1,.h2,.h3,.top-h,.top-headline,
     .body,.lead,.nicho,.nicho-tag,.top-nicho,
-    .accent,.sub-label,.step-row,.vr-label {
+    .accent,.sub-label,.step-row,.vr-label,.accent-text {
       hyphens: none;
       word-break: keep-all;
     }
-    /* Garante que headline e subheadline preencham bem sem órfãos */
+    /* Distribuição equilibrada de linhas */
     .headline,.h1 { text-wrap: balance; }
-    .subheadline,.body,.h2 { text-wrap: pretty; }
+    .subheadline,.body,.h2,.accent-text { text-wrap: pretty; }
+    /* MARGEM DE SEGURANÇA: nenhum elemento ultrapassa as bordas */
+    .content > *, .content { max-width: 100%; box-sizing: border-box; overflow: hidden; }
+    .cta, [class*='cta'] { max-width: 100%; box-sizing: border-box; }
 </style>
 </head>
 <body>

@@ -154,6 +154,63 @@ So mudam um detalhe de cada vez.
 
 ---
 
+## Regras de Tipografia e Alinhamento Visual
+
+### REGRA INVIOLÁVEL: Preços nunca quebram de linha
+
+Valor monetário em qualquer posição do criativo JAMAIS pode quebrar entre linhas.
+
+PROIBIDO:
+```
+R$
+67,00
+```
+```
+R$ 5.000,
+00
+```
+
+CORRETO: "R$ 67,00" sempre na mesma linha, sempre legível de uma vez.
+
+Implementação obrigatória no CSS de todo template:
+```css
+.price, .inst, .price-installment, .value, .vr-num {
+  white-space: nowrap;
+}
+```
+
+### REGRA: Títulos sem quebra de palavra no meio (sem hifenização)
+
+Nunca cortar uma palavra com hífen automático no meio de um título.
+Nunca deixar uma palavra solitária na última linha (órfão).
+
+Implementação obrigatória:
+```css
+.headline, .h1, .h2, .subheadline, .body {
+  hyphens: none;
+  word-break: keep-all;
+  text-wrap: balance;   /* distribuição proporcional entre linhas */
+}
+```
+
+### REGRA: Pesos visuais proporcionais
+
+A hierarquia tipográfica deve ser evidente e equilibrada:
+- Headline principal: maior elemento visual depois do preço
+- Subheadline: 40-50% do tamanho do headline
+- Body/descrição: 30-35% do tamanho do headline
+- Nicho/label: menor elemento, acima do headline
+
+Se um template tiver headline 86px, o body deve ser ~30px (não 60px, não 18px).
+
+### REGRA: Alinhamento consistente
+
+- Templates left-aligned: TODOS os elementos alinhados à esquerda
+- Templates centered: TODOS os elementos centralizados
+- Nunca misturar alinhamento dentro do mesmo bloco de conteúdo
+
+---
+
 ## Proibicoes Absolutas
 
 | Proibido | Motivo |
@@ -166,6 +223,9 @@ So mudam um detalhe de cada vez.
 | Usar "curso", "aulas", "conteudo" | Posicionamento errado do produto |
 | Imagem gerada sem referencia aprovada | Lovart inventa estilo diferente |
 | Safe zone violada (texto no terco inferior) | UI do Instagram/Reels encobre a area |
+| Preco quebrando de linha (R$\n67,00) | Ilegivel e antiprofissional |
+| Palavra orfa sozinha na ultima linha de titulo | Desequilibrio visual, parece erro |
+| Template com {{HEADLINE}} renderizado sem passar o valor | Texto em branco ou campo vazio visivel |
 
 ---
 
@@ -182,6 +242,11 @@ Antes de entregar qualquer criativo:
 - [ ] Texto em portugues brasileiro
 - [ ] Imagem gerada com --reference quando aplicavel
 - [ ] Score minimo 70 (lt-quality-scorer)
+- [ ] Preco em uma unica linha (nunca R$\n67,00)
+- [ ] Nenhum titulo com palavra orfa sozinha na ultima linha
+- [ ] Templates com {{HEADLINE}}/{{SUBHEADLINE}} renderizados com copy real passado via --headline/--subheadline
+- [ ] CSS com white-space:nowrap nos elementos de preco
+- [ ] Alinhamento visual consistente (tudo esquerda OU tudo centro, nunca misturado)
 
 ---
 
